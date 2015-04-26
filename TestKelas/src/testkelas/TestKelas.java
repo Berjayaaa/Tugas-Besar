@@ -1,15 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package ruangkelas;
 import com.sun.org.apache.bcel.internal.generic.GOTO;
 import java.util.Scanner;
-/**
- *
- * @author Berjayaaa
- */
+
 public class KelasTest {
 
     public static void main(String[] okeh) {
