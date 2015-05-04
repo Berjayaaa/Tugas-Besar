@@ -3,10 +3,13 @@ package testkelas;
 import java.util.Scanner;
 
 
-public class ControlKelas {
+public class ControlKelas{
 
     Scanner in = new Scanner(System.in);
     private final RuangKelas kelas = new RuangKelas();
+    int totSesuai=0;
+    int sesuai=0;
+  
     
     void input1() {
         System.out.print("Masukkan nama kelas: ");
@@ -38,6 +41,7 @@ public class ControlKelas {
             bentuk = "Persegi panjang";
             System.out.println("Bentuk: " + bentuk);
             System.out.println("SESUAI");
+            totSesuai++;
         }
         System.out.println("-------------------------------------------------");
         return null;
@@ -55,6 +59,13 @@ public class ControlKelas {
     }
     
     void input3(){
+        if(hitungRasioLuas()>=0.5){
+            System.out.println("Rasio SESUAI");
+            totSesuai++;
+        }
+        else{
+            System.out.println("Rasio TIDAK SESUAI");
+        }
         System.out.print("masukkan jumlah pintu: ");
         kelas.setJmPintu(in.nextInt());
         System.out.print("Masukkan jumlah jendela: ");
@@ -62,20 +73,28 @@ public class ControlKelas {
         
     }
     
-    void anlisisPintuDanJendela(){
+    String anlisisPintuDanJendela(){
+        sesuai=0;
         if(kelas.getJmPintu()>=2){
             System.out.println("Jumlah pintu SESUAI");
+            sesuai++;            
         }
         else{
             System.out.println("Jumalah pintu TIDAK SESUAI");
         }
         if(kelas.getJmJendela()>=1){
             System.out.println("Jumlah jendela SESUAI");
+            sesuai++;
         }
         else{
             System.out.println("Jumlah jendela TIDAK SESUAI");
         }
+        if(sesuai==2){
+            System.out.println("Analisis Pintu dan Jendela SESUAI ");
+            totSesuai++;        
+       }
         System.out.println("-------------------------------------------------");
+        return null;
     }
     
     void input4(){
@@ -91,26 +110,35 @@ public class ControlKelas {
         
     }
     
-    void analisisKelistrikan(){
+    String analisisKelistrikan(){
+        sesuai=0;
         if(kelas.getJmStopKontak()>=4){
             System.out.println("jumlah stop kontak SESUAI");
+            sesuai++;
         }
         else{
             System.out.println("Jumlah Stop kontak TIDAK SESUAI");
         }
         if(kelas.getKonStopKontak()>=4){
             System.out.println("kondisi steker BAIK");
+            sesuai++;
         }
         else{
             System.out.println("Kondisi steker TIDAK BAIK");
         }
         if(kelas.getPosStopKontak().equals("dipojok ruang") && kelas.getPosStopKontak().equals("dekat dosen")){
             System.out.println("posisi steker SESUAI");
+            sesuai++;
         }
         else{
             System.out.println("Posisi steker TIDAK SESUAI");
         }
+        if(sesuai==3){
+            System.out.println("Analisis Kelistrikan SESUAI");
+            totSesuai++;
+        }
         System.out.println("-------------------------------------------------");        
+        return null;
     }
     
     void input5(){
@@ -124,26 +152,35 @@ public class ControlKelas {
         
     }
     
-    void analisisLCD(){
+    String analisisLCD(){
+        sesuai=0;
         if(kelas.getJmKabelLCD()>=1){
             System.out.println("jumlah kabel LCD SESUAI");
+            sesuai++;
         }
         else{
             System.out.println("jumlah kabel LCD TIDAK SESUAI");
         }
         if(kelas.getKonKabelLCD().equals("berfungsi")){
             System.out.println("kondisi kabel LCD SESUAI");
+            sesuai++;
         }
         else{
             System.out.println("kondisi kebel LCD TIDAK SESUAI");
         }
         if(kelas.getPosKabelLCD().equals("dekat dosen")){
             System.out.println("Posisi kabel LCD SESUAI");
+            sesuai++;
         }
         else{
             System.out.println("Posisi kabel LCD TIDAK SESUAI");
         }
+        if(sesuai==3){
+            System.out.println("Analisis LCD SESUAI");
+            totSesuai++;
+        }
         System.out.println("-------------------------------------------------");
+        return null;
     }
     
     void input6(){
@@ -157,26 +194,35 @@ public class ControlKelas {
         
     }
     
-    void analisisLampu(){
+    String analisisLampu(){
+        sesuai=0;
         if(kelas.getJmLampu()>=18){
             System.out.println("Jumlah lampu SESUAI");
+            sesuai++;
         }
         else{
             System.out.println("Jumlah lampu TIDAK SESUAI");
         }
         if(kelas.getKonLampu()>=18){
             System.out.println("Kondisi lampu SESUAI");
+            sesuai++;
         }
         else{
             System.out.println("Kondisi lampu TIDAK SESUAI");
         }
         if(kelas.getPosLampu().equals("atap ruangan")){
             System.out.println("posisi lampu SESUAI");
+            sesuai++;
         }
         else{
             System.out.println("posisi lampu TIDAK SESUAI");
         }
+        if(sesuai==3){
+            System.out.println("Analisis Lampu SESUAI");
+            totSesuai++;
+        }
         System.out.println("-------------------------------------------------");
+        return null;
     }
     
     void input7(){
@@ -190,26 +236,35 @@ public class ControlKelas {
         
     }
     
-    void analisisKipasAngin(){
+    String analisisKipasAngin(){
+        sesuai=0;
         if(kelas.getJmKipas()>=2){
             System.out.println("Jumlah kipas angin SESUAI");
+            sesuai++;
         }
         else{
             System.out.println("Jumlah kipas angin TIDAK SESUAI");
         }
         if(kelas.getKonKipas()>=2){
             System.out.println("Kondisi kipas angin SESUAI");
+            sesuai++;
         }
         else{
             System.out.println("KOndisi kipas angin TIDAK SESUAI");
         }
         if(kelas.getPosKipas().equals("belakang") || kelas.getPosKipas().equals("samping")){
             System.out.println("Posisi kipas angin SESUAI");
+            sesuai++;
         }
         else{
             System.out.println("Posisi kipas angin TIDAK SESUAI");
         }
+        if(sesuai==3){
+            System.out.println("Analisis Kipas Angin SESUIA");
+            totSesuai++;
+        }
         System.out.println("-------------------------------------------------");
+        return null;
     }
     
     void input8(){
@@ -223,26 +278,35 @@ public class ControlKelas {
         
     }
     
-    void analisisAC(){
+    String analisisAC(){
+        sesuai=0;
         if(kelas.getJmAC()>=1){
             System.out.println("jumlah AC SESUAI");
+            sesuai++;
         }
         else{
             System.out.println("jumlah AC TIDAK SESUIA");
         }
         if(kelas.getKonAC().equals("baik")){
             System.out.println("Kondisi AC SESUIA");
+            sesuai++;
         }
         else{
             System.out.println("kondidi AC TIDAK SESUAI");
         }
         if(kelas.getPosAC().equals("di belakang")|| kelas.getPosAC().equals("samping")){
             System.out.println("Posisi AC SESUAI");
+            sesuai++;
         }
         else{
             System.out.println("Posisi AC TIDAK SESUAI");
         }
+        if(sesuai==3){
+            System.out.println("Analisis AC SESUAI");
+            totSesuai++;
+        }
         System.out.println("-------------------------------------------------");
+        return null;
     }
     
     void input9(){
@@ -253,20 +317,28 @@ public class ControlKelas {
         
     }
     
-    void analisisInternet(){
+    String analisisInternet(){
+        sesuai=0;
         if(kelas.getSSID().equals("UMM Hotspot")){
             System.out.println("SSID SESUAI");
+            sesuai++;
         }
         else{
             System.out.println("SSID TIDAK SESUAI");
         }
         if(kelas.getBanwidth().equals("bisa login")){
             System.out.println("bandwidth SESUAI");
+            sesuai++;
         }
         else{
             System.out.println("bandwidth TIDAK SESUAI");
         }
+        if(sesuai==2){
+            System.out.println("Analisis Interner SESUAI");
+            totSesuai++;
+        }
         System.out.println("-------------------------------------------------");
+        return null;
     }
     
     void input10(){
@@ -279,40 +351,50 @@ public class ControlKelas {
         kelas.setPosCCTV(in.nextLine());
     }
     
-    void analisisCCTV(){
+    String analisisCCTV(){
+        sesuai=0;
         if(kelas.getJmCCTV()==2){
             System.out.println("Jumlah CCTV SESUAI");
+            sesuai++;
         }
         else{
             System.out.println("Jumlah CCTV TIDAK SESUAI");
         }
         if(kelas.getKonCCTV()==2){
             System.out.println("Kondisi CCTV SESUAI");
+            sesuai++;
         }
         else{
             System.out.println("Kondisi CCTV TIDAK SESUAI");
         }
         if(kelas.getPosCCTV().equals("depan")&& kelas.getPosCCTV().equals("belakang")){
             System.out.println("Posisi CCTV SESUIA");
+            sesuai++;
         }
         else{
             System.out.println("Posisi CCTV TIDAK SESUAI");
         }
+        if(sesuai==3){
+            totSesuai++;
+        }
         System.out.println("-------------------------------------------------");
+        return null;
     }
     
     void input11(){
         System.out.print("Masukkan kondisi lantai(bersih/tidak bersih): ");
         kelas.setKonLantai(in.nextLine());                
     }
-    void analisisKebersihanLantai(){
+    String analisisKebersihanLantai(){
         if(kelas.getKonLantai().equals("bersih")){
             System.out.println("Kondisi lantai SESUAI");
+            totSesuai++;
         }
         else{
             System.out.println("Kondisi lantai TIDAK SESUAI");
         }
         System.out.println("-------------------------------------------------");
+        return null;
     }
     
     void input12(){
@@ -320,14 +402,16 @@ public class ControlKelas {
         kelas.setKonDinding(in.nextLine());
     }
     
-    void analisisKebersihanDinding(){
+    String analisisKebersihanDinding(){
         if(kelas.getKonDinding().equals("bersih")){
             System.out.println("Kondisi dinding SESUAI");
+            totSesuai++;
         }
         else{
             System.out.println("KOndisi dinding TIDAK SESUAI");
         }
         System.out.println("-------------------------------------------------");
+        return null;
     }
     
     void input13(){
@@ -335,14 +419,16 @@ public class ControlKelas {
         kelas.setKonAtap(in.nextLine());
     }
     
-    void analisisKebersihanAtap(){
+    String analisisKebersihanAtap(){
         if(kelas.getKonAtap().equals("bersih")){
             System.out.println("Kondisi atap SESUAI");
+            totSesuai++;
         }
         else{
             System.out.println("Kondisi atap TIDAK SESUAI");
         }
         System.out.println("-------------------------------------------------");
+        return null;
     }
     
     void input14(){
@@ -350,14 +436,16 @@ public class ControlKelas {
         kelas.setKonPintu(in.nextLine());
     }
     
-    void analisisKebersihanPintu(){
+    String analisisKebersihanPintu(){
         if(kelas.getKonPintu().equals("bersih")){
             System.out.println("Kondisi pintu SESUAI");
+            totSesuai++;
         }
         else{
             System.out.println("Kondisi pintu TIDAK SESUAI");
         }
         System.out.println("-------------------------------------------------");
+        return null;
     }
     
     void input15(){
@@ -365,14 +453,17 @@ public class ControlKelas {
         kelas.setKonJendela(in.nextLine());
     }
     
-    void analisisKebersihanJendela(){
+    String analisisKebersihanJendela(){
         if(kelas.getKonJendela().equals("bersih")){
             System.out.println("Kondisi jendela SESUAI");
+            totSesuai++;
         }
+        
         else{
             System.out.println("Kondisi Jendela TIDAK SESUAI");
         }
         System.out.println("-------------------------------------------------");
+        return null;
     }
     
     void input16(){
@@ -380,14 +471,16 @@ public class ControlKelas {
         kelas.setSirkulasiUdara(in.nextLine());
     }
     
-    void analisisSirkulasiUdara(){
+    String analisisSirkulasiUdara(){
         if(kelas.getSirkulasiUdara().equals("lancar")){
             System.out.println("Sirkulasi udara SESUIA");
+            totSesuai++;
         }
         else{
             System.out.println("Sirkulasi udara TIDAK SESUAI");
         }
         System.out.println("-------------------------------------------------");
+        return null;
     }
     
     void input17(){
@@ -395,14 +488,16 @@ public class ControlKelas {
         kelas.setPencahayaan(in.nextInt());
     }
     
-    void analisisPencahayaan(){
+    String analisisPencahayaan(){
         if(kelas.getPencahayaan()>=250&& kelas.getPencahayaan()<=350){
             System.out.println("Pencahayaan SESUIA");
+            totSesuai++;
         }
         else{
             System.out.println("pencahayaan TIDAK SESUAI");
         }
         System.out.println("-------------------------------------------------");
+        return null;
     }
     
     void input18(){
@@ -410,14 +505,16 @@ public class ControlKelas {
         kelas.setKelembapan(in.nextDouble());
     }
     
-    void analisisKelembapan(){
+    String analisisKelembapan(){
         if(kelas.getKelembapan()>=70&&kelas.getKelembapan()<=80){
             System.out.println("kelambapan SESUAI");
+            totSesuai++;
         }
         else{
             System.out.println("Kelembapan TIDAK SESUAI");
         }
         System.out.println("-------------------------------------------------");
+        return null;
     }
     
     void input19(){
@@ -426,15 +523,16 @@ public class ControlKelas {
         in.nextLine();
     }
     
-    void analisisSuhu(){
+    String analisisSuhu(){
         if(kelas.getSuhu()>=25&&kelas.getSuhu()<=35){
             System.out.println("Suhu SESUAI");
-            
+            totSesuai++;
         }
         else{
             System.out.println("Suhu TIDAK SESUAI");
         }
         System.out.println("-------------------------------------------------");
+        return null;
     }
     
     void input20(){
@@ -442,13 +540,15 @@ public class ControlKelas {
         kelas.setKebisingan(in.nextLine());
     }
     
-    void analisisKebisingan(){
+    String analisisKebisingan(){
         if(kelas.getKebisingan().equals("tidak bising")){
             System.out.println("Kebisingna SESUAI");
+            totSesuai++;
         }
         else
             System.out.println("Kebisingan TIDAK SESUAI");
         System.out.println("-------------------------------------------------");
+        return null;
     }
     
     void input21(){
@@ -457,14 +557,16 @@ public class ControlKelas {
         kelas.setBau(in.nextLine());
     }
     
-    void analisisBau(){
+    String analisisBau(){
         if(kelas.getBau().equals("tidak bau")){
             System.out.println("Bau SESUAI");
+            totSesuai++;
         }
         else{
             System.out.println("Bau TIDAK SESUAI");
         }
         System.out.println("-------------------------------------------------");
+        return null;
     }
     
     
@@ -473,14 +575,16 @@ public class ControlKelas {
         kelas.setKebocoran(in.nextLine());
     }
     
-    void analisisKebocoran(){
+    String analisisKebocoran(){
         if(kelas.getKebocoran().equals("tidak bocor")){
             System.out.println("Kebocoran SESUAI");
+            totSesuai++;
         }
         else{
             System.out.println("kebocoran TIDAK SESUAI");
         }
         System.out.println("-------------------------------------------------");
+        return null;
     }
     
     void input23(){
@@ -488,14 +592,16 @@ public class ControlKelas {
         kelas.setKerusakan(in.nextLine());
     }
     
-    void analisisKerusakan(){
+    String analisisKerusakan(){
         if(kelas.getKerusakan().equals("tidak rusak")){
             System.out.println("Kerusakan SESUAI");
+            totSesuai++;
         }
         else{
             System.out.println("Kerusakan TIDAK SESUAI");
         }
         System.out.println("-------------------------------------------------");
+        return null;
     }
     
     void input24(){
@@ -503,13 +609,15 @@ public class ControlKelas {
         kelas.setKeausan(in.nextLine());
     }
     
-    void analisisKeausan(){
+    String analisisKeausan(){
         if(kelas.getKeausan().equals("tidak aus")){
             System.out.println("Keausan SESUAI");
+            totSesuai++;
         }
         else
             System.out.println("Keausan TIDAK SESUAI");
         System.out.println("-------------------------------------------------");
+        return null;
     }
    
     void input25(){
@@ -517,14 +625,16 @@ public class ControlKelas {
         kelas.setKekokohan(in.nextLine());
     }
     
-    void analisisKekokohan(){
+    String analisisKekokohan(){
         if(kelas.getKekokohan().equals("kokoh")){
             System.out.println("Kekokohan SESUAI");
+            totSesuai++;
         }
         else{
             System.out.println("Kekokohan TIDAK SESUAI");
         }
         System.out.println("-------------------------------------------------");
+        return null;
     }
     
     void input26(){
@@ -532,14 +642,16 @@ public class ControlKelas {
         kelas.setKunciPintu(in.nextLine());        
     }
     
-    void analisisKunciPintu(){
+    String analisisKunciPintu(){
         if(kelas.getKunciPintu().equals("ada")){
             System.out.println("Kunci pintu SESUAI");
+            totSesuai++;
         }
         else{
             System.out.println("Kunci pintu TIDAK SESUAI");
         }
         System.out.println("-------------------------------------------------");
+        return null;
     }
     
     void input27(){
@@ -547,14 +659,16 @@ public class ControlKelas {
         kelas.setKunciJendela(in.nextLine());
     }
     
-    void analisisKunciJendela(){
+    String analisisKunciJendela(){
         if(kelas.getKunciJendela().equals("ada")){
             System.out.println("Kunci jendela SESUAi");
+            totSesuai++;
         }
         else{
             System.out.println("Kunci jendela TIDAK SESUAi");
         }
         System.out.println("-------------------------------------------------");
+        return null;
     }
     
     void input28(){
@@ -562,14 +676,16 @@ public class ControlKelas {
         kelas.setBahaya(in.nextLine());
     }
     
-    void analisisKeamanan(){
+    String analisisKeamanan(){
         if(kelas.getBahaya().equals("aman")){
             System.out.println("Keamanan SESUIA");
+            totSesuai++;
         }
         else{
             System.out.println("keamanan TIDAK SESUAI");
         }
         System.out.println("-------------------------------------------------");
+        return null;
     }
     
     void cetak(){
@@ -619,6 +735,8 @@ public class ControlKelas {
         System.out.println("Kunci pintu: "+kelas.getKunciPintu());
         System.out.println("Kunci jendela: "+kelas.getKunciJendela());
         System.out.println("Bahaya: "+kelas.getBahaya());
+        System.out.println("Jumlah Analisis Yang SESUAI: "+totSesuai);
+        
     }
 
 }
