@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class KelasTest {
 
-    public static void main(String[] okeh) {
+    public static void main(String[] jaya) {
         Scanner in=new Scanner(System.in);
         ControlKelas[] kelas = new ControlKelas[1];
         for (int a = 0; a < kelas.length; a++) {
@@ -31,7 +31,8 @@ public class KelasTest {
             kelas[a].analisisInternet();
             kelas[a].input10();
             kelas[a].analisisCCTV();
-            kelas[a].input11();
+            kelas[a].analisisKebersihan();
+            /*kelas[a].input11();
             kelas[a].analisisKebersihanLantai();
             kelas[a].input12();
             kelas[a].analisisKebersihanDinding();
@@ -40,7 +41,7 @@ public class KelasTest {
             kelas[a].input14();
             kelas[a].analisisKebersihanPintu();
             kelas[a].input15();
-            kelas[a].analisisKebersihanJendela();
+            kelas[a].analisisKebersihanJendela();*/
             kelas[a].input16();
             kelas[a].analisisSirkulasiUdara();
             kelas[a].input17();
