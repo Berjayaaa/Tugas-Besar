@@ -547,7 +547,7 @@ public class ControlKelas extends Kebersihan{
     }
     
     
-    void input22(){
+   void input22(){
         System.out.print("Masukkan kebocoran (bocor/ tidak bocor): ");
         kelas.setKebocoran(in.nextLine());
     }
