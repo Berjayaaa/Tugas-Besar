@@ -3,7 +3,7 @@ package testkelas;
 import java.util.Scanner;
 
 
-public class ControlKelas{
+public class ControlKelas extends Kebersihan{
 
     Scanner in = new Scanner(System.in);
     private final RuangKelas kelas = new RuangKelas();
@@ -104,7 +104,7 @@ public class ControlKelas{
         System.out.print("Masukkan jumlah stop kontak dalam kondisi BAIK: ");
         kelas.setKonStopKontak(in.nextInt());
         in.nextLine();
-        System.out.print("masukkan posisi stop kontak: ");
+        System.out.print("masukkan posisi stop kontak (pojok ruang/ dekat dosen): ");
         kelas.setPosStopKontak(in.nextLine());
         
         
@@ -126,7 +126,7 @@ public class ControlKelas{
         else{
             System.out.println("Kondisi steker TIDAK BAIK");
         }
-        if(kelas.getPosStopKontak().equals("dipojok ruang") && kelas.getPosStopKontak().equals("dekat dosen")){
+        if(kelas.getPosStopKontak().equals("pojok ruang") && kelas.getPosStopKontak().equals("dekat dosen")){
             System.out.println("posisi steker SESUAI");
             sesuai++;
         }
@@ -147,7 +147,7 @@ public class ControlKelas{
         in.nextLine();
         System.out.print("Masukkan kondisi kabel LCD(berfungsi/tidak berfungsi): ");
         kelas.setKonKabelLCD(in.nextLine());
-        System.out.print("Masukkan posisi kabel LCD: ");
+        System.out.print("Masukkan posisi kabel LCD (dekat dosen/ tempat lain): ");
         kelas.setPosKabelLCD(in.nextLine());   
         
     }
@@ -189,7 +189,7 @@ public class ControlKelas{
         System.out.print("Masukkan jumlah lampu dalam kondisi BAIK: ");
         kelas.setKonLampu(in.nextInt());
         in.nextLine();
-        System.out.print("Masukkkan posisi lampu: ");
+        System.out.print("Masukkkan posisi lampu (atap ruangan/ tempat lain): ");
         kelas.setPosLampu(in.nextLine());
         
     }
@@ -231,7 +231,7 @@ public class ControlKelas{
         System.out.print("masukkan jumlah kipas angin dalam kondisi BAIK: ");
         kelas.setKonKipas(in.nextInt());
         in.nextLine();
-        System.out.print("Masukkan posisi kipas angin: ");
+        System.out.print("Masukkan posisi kipas angin (belakang/ samping): ");
         kelas.setPosKipas(in.nextLine());
         
     }
@@ -273,7 +273,7 @@ public class ControlKelas{
         in.nextLine();
         System.out.print("Masukkan kondisi AC(baik/ tidak baik): ");
         kelas.setKonAC(in.nextLine());
-        System.out.print("Masukkan posisi AC: ");
+        System.out.print("Masukkan posisi AC (belakang/ samping): ");
         kelas.setPosAC(in.nextLine());
         
     }
