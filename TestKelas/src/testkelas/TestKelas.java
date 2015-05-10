@@ -1,80 +1,98 @@
 
 package ruangkelas;
-import com.sun.org.apache.bcel.internal.generic.GOTO;
+
 import java.util.Scanner;
 
 public class KelasTest {
 
     public static void main(String[] jaya) {
         Scanner in=new Scanner(System.in);
-        ControlKelas[] kelas = new ControlKelas[1];
-        for (int a = 0; a < kelas.length; a++) {
-            kelas[a] = new ControlKelas();
-            kelas[a].input1();
-            kelas[a].hitungLuasRuang();
-            kelas[a].hitungBentukRuang();
-            kelas[a].input2();
-            kelas[a].hitungRasioLuas();
-            kelas[a].input3();
-            kelas[a].anlisisPintuDanJendela();
-            kelas[a].input4();
-            kelas[a].analisisKelistrikan();
-            kelas[a].input5();
-            kelas[a].analisisLCD();
-            kelas[a].input6();
-            kelas[a].analisisLampu();
-            kelas[a].input7();
-            kelas[a].analisisKipasAngin();
-            kelas[a].input8();
-            kelas[a].analisisAC();
-            kelas[a].input9();
-            kelas[a].analisisInternet();
-            kelas[a].input10();
-            kelas[a].analisisCCTV();
-            kelas[a].analisisKebersihan();
-            /*kelas[a].input11();
-            kelas[a].analisisKebersihanLantai();
-            kelas[a].input12();
-            kelas[a].analisisKebersihanDinding();
-            kelas[a].input13();
-            kelas[a].analisisKebersihanAtap();
-            kelas[a].input14();
-            kelas[a].analisisKebersihanPintu();
-            kelas[a].input15();
-            kelas[a].analisisKebersihanJendela();*/
-            kelas[a].input16();
-            kelas[a].analisisSirkulasiUdara();
-            kelas[a].input17();
-            kelas[a].analisisPencahayaan();
-            kelas[a].input18();
-            kelas[a].analisisKelembapan();
-            kelas[a].input19();
-            kelas[a].analisisSuhu();
-            kelas[a].input20();
-            kelas[a].analisisKebisingan();
-            kelas[a].input21();
-            kelas[a].analisisBau();
-            kelas[a].input22();
-            kelas[a].analisisKebocoran();
-            kelas[a].input23();
-            kelas[a].analisisKerusakan();
-            kelas[a].input24();
-            kelas[a].analisisKeausan();
+        RuangKelas r=new RuangKelas("123", "GKB 1", "PBO Java");
+        ControlKelas[] c = new ControlKelas[1];
+        Sarana[] s=new Sarana[1];
+        Kebersihan[] b=new Kebersihan[1];
+        Lingkungan[] l=new Lingkungan[1];
+        Kenyamanan[] k=new Kenyamanan[1];
+        Keamanan[] a=new Keamanan[1];
+        for (int x = 0; x < c.length; x++) {
+            c[x] = new ControlKelas();
+            s[x]=new Sarana();
+            b[x]=new Kebersihan();
+            l[x]=new Lingkungan();
+            k[x]=new Kenyamanan();
+            a[x]=new Keamanan();
+            c[x].data(null, null, null);
+            //c[x].input1();
+            c[x].hitungLuasRuang();
+            c[x].hitungBentukRuang();
+            c[x].input2();
+            c[x].hitungRasioLuas();
+            c[x].input3();
+            c[x].analisisPintuDanJendela();
+            s[x].input4();      
+            s[x].analisisKelistrikan();
+            s[x].input5();
+            s[x].analisisLCD();
+            s[x].input6();
+            s[x].analisisLampu();
+            s[x].input7();
+            s[x].analisisKipasAngin();
+            s[x].input8();
+            s[x].analisisAC();
+            s[x].input9();
+            s[x].analisisInternet();
+            s[x].input10();
+            s[x].analisisCCTV();
+            b[x].inputkebersihan();
+            b[x].analisisKebersihan();
+            /*kelas[x].input11();
+            kelas[x].analisisKebersihanLantai();
+            kelas[x].input12();
+            kelas[x].analisisKebersihanDinding();
+            kelas[x].input13();
+            kelas[x].analisisKebersihanAtap();
+            kelas[x].input14();
+            kelas[x].analisisKebersihanPintu();
+            kelas[x].input15();
+            kelas[x].analisisKebersihanJendela();*/
+            l[x].input16();
+            l[x].analisisSirkulasiUdara();
+            l[x].input17();
+            l[x].analisisPencahayaan();
+            l[x].input18();
+            l[x].analisisKelembapan();
+            l[x].input19();
+            l[x].analisisSuhu();
+            k[x].input20();
+            k[x].analisisKebisingan();
+            k[x].input21();
+            k[x].analisisBau();
+            k[x].input22();
+            k[x].analisisKebocoran();
+            k[x].input23();
+            k[x].analisisKerusakan();
+            k[x].input24();
+            k[x].analisisKeausan();
             //mulai:
             String edit = "y";
             while(edit.equals("y")){
-            kelas[a].input25();
-            kelas[a].analisisKekokohan();
-            kelas[a].input26();
-            kelas[a].analisisKunciPintu();
-            kelas[a].input27();
-            kelas[a].analisisKunciJendela();
-            kelas[a].input28();
-            kelas[a].analisisKeamanan();
-            kelas[a].cetak();
+            a[x].input25();
+            a[x].analisisKekokohan();
+            a[x].input26();
+            a[x].analisisKunciPintu();
+            a[x].input27();
+            a[x].analisisKunciJendela();
+            a[x].input28();
+            a[x].analisisKeamanan();
             
             System.out.println("edit (y/n): ");
             edit = in.nextLine();
+            c[x].cetakControl();
+            s[x].cetakSarana();
+            b[x].cetakKebersihan();
+            l[x].cetakLinkungan();
+            k[x].cetakKenyamanan();
+            a[x].cetakKeamanan();
             
             }
         }

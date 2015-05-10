@@ -2,6 +2,9 @@ package testkelas;
 
 public class RuangKelas {
 
+    public RuangKelas(){}
+    
+
     private String nama;
     private String lokasi;
     private String studi;
@@ -12,43 +15,50 @@ public class RuangKelas {
     private int jmJendela;
     private int jmStopKontak;
     private int konStopKontak;
-    private String posStopKontak;
+    private int posStopKontak;
     private int jmKabelLCD;
-    private String konKabelLCD;
-    private String PosKabelLCD;
+    private int konKabelLCD;
+    private int PosKabelLCD;
     private int jmLampu;
     private int konLampu;
-    private String posLampu;
+    private int posLampu;
     private int jmKipas;
     private int konKipas;
-    private String posKipas;
+    private int posKipas;
     private int jmAC;
-    private String konAC;
-    private String posAC;
-    private String SSID;
-    private String banwidth;
+    private int konAC;
+    private int posAC;
+    private int SSID;
+    private int banwidth;
     private int jmCCTV;
     private int konCCTV;
-    private String posCCTV;
-    private String konLantai;
-    private String konDinding;
-    private String konAtap;
-    private String konPintu;
-    private String konJendela;
-    private String sirkulasiUdara;
+    private int posCCTV;
+    private int konLantai;
+    private int konDinding;
+    private int konAtap;
+    private int konPintu;
+    private int konJendela;
+    private int sirkulasiUdara;
     private double pencahayaan;
     private double kelembapan;
     private double suhu;
-    private String kebisingan;
-    private String bau;
-    private String kebocoran;
-    private String kerusakan;
-    private String keausan;
-    private String kekokohan;
-    private String kunciPintu;
-    private String kunciJendela;
-    private String bahaya;
-
+    private int kebisingan;
+    private int bau;
+    private int kebocoran;
+    private int kerusakan;
+    private int keausan;
+    private int kekokohan;
+    private int kunciPintu;
+    private int kunciJendela;
+    private int bahaya;
+    
+    public RuangKelas(String nama,String lokasi, String studi){
+        this.nama=nama;
+        this.lokasi=lokasi;
+        this.studi=studi;
+    }
+    void data(){}
+    void data(String nama,String lokasi, String studi){}
     
     public String getNama() {
         return nama;
@@ -150,22 +160,22 @@ public class RuangKelas {
     }
 
 
-    public String getKonKabelLCD() {
+    public int getKonKabelLCD() {
         return konKabelLCD;
     }
 
 
-    public void setKonKabelLCD(String konKabelLCD) {
+    public void setKonKabelLCD(int konKabelLCD) {
         this.konKabelLCD = konKabelLCD;
     }
 
 
-    public String getPosKabelLCD() {
+    public int getPosKabelLCD() {
         return PosKabelLCD;
     }
 
 
-    public void setPosKabelLCD(String PosKabelLCD) {
+    public void setPosKabelLCD(int PosKabelLCD) {
         this.PosKabelLCD = PosKabelLCD;
     }
 
@@ -189,12 +199,12 @@ public class RuangKelas {
     }
 
 
-    public String getPosLampu() {
+    public int getPosLampu() {
         return posLampu;
     }
 
 
-    public void setPosLampu(String posLampu) {
+    public void setPosLampu(int posLampu) {
         this.posLampu = posLampu;
     }
 
@@ -219,12 +229,12 @@ public class RuangKelas {
     }
 
 
-    public String getPosKipas() {
+    public int getPosKipas() {
         return posKipas;
     }
 
 
-    public void setPosKipas(String posKipas) {
+    public void setPosKipas(int posKipas) {
         this.posKipas = posKipas;
     }
 
@@ -239,226 +249,366 @@ public class RuangKelas {
     }
 
 
-    public String getKonAC() {
+    public int getKonAC() {
         return konAC;
     }
 
 
-    public void setKonAC(String konAC) {
+    public void setKonAC(int konAC) {
         this.konAC = konAC;
     }
 
 
-    public String getPosAC() {
+    public int getPosAC() {
         return posAC;
     }
 
 
-    public void setPosAC(String posAC) {
+    public void setPosAC(int posAC) {
         this.posAC = posAC;
     }
 
 
-    public String getSSID() {
+    public int getSSID() {
         return SSID;
     }
 
 
-    public void setSSID(String SSID) {
+    public void setSSID(int SSID) {
         this.SSID = SSID;
     }
 
 
-    public String getBanwidth() {
+    public int getBanwidth() {
         return banwidth;
     }
 
-    public void setBanwidth(String banwidth) {
+    /**
+     * @param banwidth the banwidth to set
+     */
+    public void setBanwidth(int banwidth) {
         this.banwidth = banwidth;
     }
 
+    /**
+     * @return the jmCCTV
+     */
     public int getJmCCTV() {
         return jmCCTV;
     }
 
+    /**
+     * @param jmCCTV the jmCCTV to set
+     */
     public void setJmCCTV(int jmCCTV) {
         this.jmCCTV = jmCCTV;
     }
 
+    /**
+     * @return the konCCTV
+     */
     public int getKonCCTV() {
         return konCCTV;
     }
 
+    /**
+     * @param konCCTV the konCCTV to set
+     */
     public void setKonCCTV(int konCCTV) {
         this.konCCTV = konCCTV;
     }
 
-    public String getPosCCTV() {
+    /**
+     * @return the posCCTV
+     */
+    public int getPosCCTV() {
         return posCCTV;
     }
 
-    public void setPosCCTV(String posCCTV) {
+    /**
+     * @param posCCTV the posCCTV to set
+     */
+    public void setPosCCTV(int posCCTV) {
         this.posCCTV = posCCTV;
     }
 
-    public String getKonLantai() {
+    /**
+     * @return the konLantai
+     */
+    public int getKonLantai() {
         return konLantai;
     }
 
-    public void setKonLantai(String konLantai) {
+    /**
+     * @param konLantai the konLantai to set
+     */
+    public void setKonLantai(int konLantai) {
         this.konLantai = konLantai;
     }
 
-    public String getKonDinding() {
+    /**
+     * @return the konDinding
+     */
+    public int getKonDinding() {
         return konDinding;
     }
 
-    public void setKonDinding(String konDinding) {
+    /**
+     * @param konDinding the konDinding to set
+     */
+    public void setKonDinding(int konDinding) {
         this.konDinding = konDinding;
     }
 
-    public String getKonAtap() {
+    /**
+     * @return the konAtap
+     */
+    public int getKonAtap() {
         return konAtap;
     }
 
-    public void setKonAtap(String konAtap) {
+    /**
+     * @param konAtap the konAtap to set
+     */
+    public void setKonAtap(int konAtap) {
         this.konAtap = konAtap;
     }
 
-    public String getKonPintu() {
+    /**
+     * @return the konPintu
+     */
+    public int getKonPintu() {
         return konPintu;
     }
 
-    public void setKonPintu(String konPintu) {
+    /**
+     * @param konPintu the konPintu to set
+     */
+    public void setKonPintu(int konPintu) {
         this.konPintu = konPintu;
     }
 
-    public String getKonJendela() {
+    /**
+     * @return the konJendela
+     */
+    public int getKonJendela() {
         return konJendela;
     }
 
-    public void setKonJendela(String konJendela) {
+    /**
+     * @param konJendela the konJendela to set
+     */
+    public void setKonJendela(int konJendela) {
         this.konJendela = konJendela;
     }
 
-    public String getSirkulasiUdara() {
+    /**
+     * @return the sirkulasiUdara
+     */
+    public int getSirkulasiUdara() {
         return sirkulasiUdara;
     }
 
-    public void setSirkulasiUdara(String sirkulasiUdara) {
+    /**
+     * @param sirkulasiUdara the sirkulasiUdara to set
+     */
+    public void setSirkulasiUdara(int sirkulasiUdara) {
         this.sirkulasiUdara = sirkulasiUdara;
     }
 
+    /**
+     * @return the pencahayaan
+     */
     public double getPencahayaan() {
         return pencahayaan;
     }
 
+    /**
+     * @param pencahayaan the pencahayaan to set
+     */
     public void setPencahayaan(double pencahayaan) {
         this.pencahayaan = pencahayaan;
     }
 
+    /**
+     * @return the kelembapan
+     */
     public double getKelembapan() {
         return kelembapan;
     }
 
+    /**
+     * @param kelembapan the kelembapan to set
+     */
     public void setKelembapan(double kelembapan) {
         this.kelembapan = kelembapan;
     }
 
+    /**
+     * @return the suhu
+     */
     public double getSuhu() {
         return suhu;
     }
 
+    /**
+     * @param suhu the suhu to set
+     */
     public void setSuhu(double suhu) {
         this.suhu = suhu;
     }
 
-    public String getKebisingan() {
+    /**
+     * @return the kebisingan
+     */
+    public int getKebisingan() {
         return kebisingan;
     }
-    
-    public void setKebisingan(String kebisingan) {
+
+    /**
+     * @param kebisingan the kebisingan to set
+     */
+    public void setKebisingan(int kebisingan) {
         this.kebisingan = kebisingan;
     }
 
-    public String getBau() {
+    /**
+     * @return the bau
+     */
+    public int getBau() {
         return bau;
     }
 
-    public void setBau(String bau) {
+    /**
+     * @param bau the bau to set
+     */
+    public void setBau(int bau) {
         this.bau = bau;
     }
 
-    public String getKebocoran() {
+    /**
+     * @return the kebocoran
+     */
+    public int getKebocoran() {
         return kebocoran;
     }
 
-    public void setKebocoran(String kebocoran) {
+    /**
+     * @param kebocoran the kebocoran to set
+     */
+    public void setKebocoran(int kebocoran) {
         this.kebocoran = kebocoran;
     }
 
-    public String getKerusakan() {
+    /**
+     * @return the kerusakan
+     */
+    public int getKerusakan() {
         return kerusakan;
     }
 
-    public void setKerusakan(String kerusakan) {
+    /**
+     * @param kerusakan the kerusakan to set
+     */
+    public void setKerusakan(int kerusakan) {
         this.kerusakan = kerusakan;
     }
 
-    public String getKeausan() {
+    /**
+     * @return the keausan
+     */
+    public int getKeausan() {
         return keausan;
     }
 
-    public void setKeausan(String keausan) {
+    /**
+     * @param keausan the keausan to set
+     */
+    public void setKeausan(int keausan) {
         this.keausan = keausan;
     }
 
-    
-    public String getKekokohan() {
+    /**
+     * @return the kekokohan
+     */
+    public int getKekokohan() {
         return kekokohan;
     }
 
-    public void setKekokohan(String kekokohan) {
+    /**
+     * @param kekokohan the kekokohan to set
+     */
+    public void setKekokohan(int kekokohan) {
         this.kekokohan = kekokohan;
     }
 
-    public String getKunciPintu() {
+    /**
+     * @return the kunciPintu
+     */
+    public int getKunciPintu() {
         return kunciPintu;
     }
 
-    public void setKunciPintu(String kunciPintu) {
+    /**
+     * @param kunciPintu the kunciPintu to set
+     */
+    public void setKunciPintu(int kunciPintu) {
         this.kunciPintu = kunciPintu;
     }
 
-    public String getKunciJendela() {
+    /**
+     * @return the kunciJendela
+     */
+    public int getKunciJendela() {
         return kunciJendela;
     }
 
-    public void setKunciJendela(String kunciJendela) {
+    /**
+     * @param kunciJendela the kunciJendela to set
+     */
+    public void setKunciJendela(int kunciJendela) {
         this.kunciJendela = kunciJendela;
     }
 
-    public String getBahaya() {
+    /**
+     * @return the bahaya
+     */
+    public int getBahaya() {
         return bahaya;
     }
 
-    public void setBahaya(String bahaya) {
+    /**
+     * @param bahaya the bahaya to set
+     */
+    public void setBahaya(int bahaya) {
         this.bahaya = bahaya;
     }
 
+    /**
+     * @return the studi
+     */
     public String getStudi() {
         return studi;
     }
 
+    /**
+     * @param studi the studi to set
+     */
     public void setStudi(String studi) {
         this.studi = studi;
     }
 
-    public String getPosStopKontak() {
+    /**
+     * @return the posStopKontak
+     */
+    public int getPosStopKontak() {
         return posStopKontak;
     }
 
-    public void setPosStopKontak(String posStopKontak) {
+    /**
+     * @param posStopKontak the posStopKontak to set
+     */
+    public void setPosStopKontak(int posStopKontak) {
         this.posStopKontak = posStopKontak;
     }
 
