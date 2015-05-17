@@ -29,7 +29,7 @@ public class Kebersihan extends ControlKelas{
         }
         
         if(super.getKonDinding()==1){
-            System.out.println("Kondisi dinding SESUAI");
+            System.out.println("Kondisi dinding SESUAI"); 
             sesuai++;
         }
         else{
