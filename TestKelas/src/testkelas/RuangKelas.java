@@ -1,7 +1,6 @@
 package testkelas;
 
-public class RuangKelas {
-
+abstract public class RuangKelas {
     public RuangKelas(){}
     
 
@@ -612,5 +611,5 @@ public class RuangKelas {
         this.posStopKontak = posStopKontak;
     }
 
-    
+    abstract void cetak();
 }
