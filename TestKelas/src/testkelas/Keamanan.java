@@ -3,8 +3,9 @@ package testkelas;
 
 
 public class Keamanan extends ControlKelas{
+    
     @Override
-    void input25(){
+    void inputKekokohan(){
         System.out.print("Masukkan kekokohan (1. kokoh\n2. tidak kokoh): ");
         super.setKekokohan(in.nextInt());
     }
@@ -21,7 +22,7 @@ public class Keamanan extends ControlKelas{
     }
     
     @Override
-    void input26(){
+    void inputKunciPintu(){
         System.out.print("Masukkan kunci pintu(1. ada\n2. tidak ada): ");
         super.setKunciPintu(in.nextInt());        
     }
@@ -37,7 +38,8 @@ public class Keamanan extends ControlKelas{
         }
     }
     
-    void input27(){
+    @Override
+    void inputKunciJendela(){
         System.out.print("Masukkan kunci jendela (1. ada\n2. tidak ada): ");
         super.setKunciJendela(in.nextInt());
     }
@@ -54,7 +56,7 @@ public class Keamanan extends ControlKelas{
     }
     
     @Override
-    void input28(){
+    void inputKeamanan(){
         System.out.print("Masukkan bahaya (1. aman\n2. tidak aman): ");
         super.setBahaya(in.nextInt());
     }
@@ -63,14 +65,15 @@ public class Keamanan extends ControlKelas{
     String analisisKeamanan(){
         if(super.getBahaya()==1){
             totSesuai++;
-            return ("Keamanan: SESUAI");
+            return ("Keamanan: SESUAI\n\n");
         }
         else{
-            return ("Keamanan: TIDAK SESUAI");
+            return ("Keamanan: TIDAK SESUAI\n\n");
         }
     }
     @Override
     void cetakKeamanan(){
+        System.out.println("---HASIL ANALISIS KEAMANAN---");
        /* System.out.println("Kekokohan: "+super.getKekokohan());
         System.out.println("Kunci pintu: "+super.getKunciPintu());
         System.out.println("Kunci jendela: "+super.getKunciJendela());
@@ -81,3 +84,4 @@ public class Keamanan extends ControlKelas{
         System.out.println(""+analisisKeamanan());
     }
 }
+
