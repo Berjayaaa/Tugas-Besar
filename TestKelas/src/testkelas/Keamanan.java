@@ -29,7 +29,7 @@ public class Keamanan extends ControlKelas{
     
     @Override
     String analisisKunciPintu(){
-        if(super.getKunciPintu()==1){
+        if(super.getKunciPintu()==1){ 
             totSesuai++;
             return ("Kunci pintu: SESUIA");
         }
