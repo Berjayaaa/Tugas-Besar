@@ -4,7 +4,7 @@ package testkelas;
 
 
 public class Kebersihan extends ControlKelas{
-    void inputkebersihan(){
+    void inputKebersihan(){
         System.out.print("Masukkan kondisi lantai(1. bersih\n2. tidak bersih): ");
         super.setKonLantai(in.nextInt());
         System.out.print("Masukkan kondisi dinding (1. bersih\n2. tidak bersih): ");
@@ -27,16 +27,13 @@ public class Kebersihan extends ControlKelas{
         else{
             System.out.println("Kondisi lantai TIDAK SESUAI");
         }
-        System.out.println("-------------------------------------------------");
         
         if(super.getKonDinding()==1){
             System.out.println("Kondisi dinding SESUAI");
             sesuai++;
         }
         else{
-            System.out.println("KOndisi dinding TIDAK SESUAI");
         }
-        System.out.println("-------------------------------------------------");
         
         if(super.getKonAtap()==1){
             System.out.println("Kondisi atap SESUAI");
@@ -45,7 +42,6 @@ public class Kebersihan extends ControlKelas{
         else{
             System.out.println("Kondisi atap TIDAK SESUAI");
         }
-        System.out.println("-------------------------------------------------");
        
         if(super.getKonPintu()==1){
             System.out.println("Kondisi pintu SESUAI");
@@ -54,7 +50,6 @@ public class Kebersihan extends ControlKelas{
         else{
             System.out.println("Kondisi pintu TIDAK SESUAI");
         }
-        System.out.println("-------------------------------------------------");
         
         if(super.getKonJendela()==1){
             System.out.println("Kondisi jendela SESUAI");
@@ -66,14 +61,15 @@ public class Kebersihan extends ControlKelas{
         }
         if(sesuai==5){
             totSesuai++;
-            return ("Analisis Kebrsihan: SESUAI");
+            return ("Analisis Kebrsihan: SESUAI\n\n");
         }
         else{
-            return ("Analisis Kebrsihan: TIDAK SESUAI");
+            return ("Analisis Kebrsihan: TIDAK SESUAI\n\n");
         }
     }
     @Override
     void cetakKebersihan(){
+        System.out.println("---HASIL ANALISIS KEBERSIHAN---");
         /*System.out.println("Kondisi lantai: "+super.getKonLantai());
         System.out.println("Kondisi dinding: "+super.getKonDinding());
         System.out.println("KOndisi atap: "+super.getKonAtap());
