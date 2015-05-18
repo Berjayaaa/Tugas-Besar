@@ -1,10 +1,10 @@
 
-package testkelas;
+package ruangkelas;
 
 
 public class Lingkungan extends ControlKelas{
     @Override
-    void input16(){
+    void inputSirkulasiUdara(){
         System.out.print("Masukkan kondisi sirkulasi udara (1.lancar\n2. tidak lancar): ");
         super.setSirkulasiUdara(in.nextInt());
     }
@@ -22,7 +22,7 @@ public class Lingkungan extends ControlKelas{
     }
     
     @Override
-    void input17(){
+    void inputPencahayaan(){
         System.out.print("Masukkan nilai pencahayaan (angka): ");
         super.setPencahayaan(in.nextInt());
     }
@@ -39,7 +39,7 @@ public class Lingkungan extends ControlKelas{
     }
     
     @Override
-    void input18(){
+    void inputKelembapan(){
         System.out.print("Masukkan nilai kelambapan (angka): ");
         super.setKelembapan(in.nextDouble());
     }
@@ -56,7 +56,7 @@ public class Lingkungan extends ControlKelas{
     }
     
     @Override
-    void input19(){
+    void inputSuhu(){
         System.out.print("Masukkan suhu (cecius): ");
         super.setSuhu(in.nextDouble());
         in.nextLine();
@@ -66,14 +66,15 @@ public class Lingkungan extends ControlKelas{
     String analisisSuhu(){
         if(super.getSuhu()>=25&&super.getSuhu()<=35){
             totSesuai++;
-            return ("Suhu: SESUAI");
+            return ("Suhu: SESUAI\n\n");
         }
         else{
-            return ("Suhu: TIDAK SESUAI");
+            return ("Suhu: TIDAK SESUAI\n\n");
         }
     }
     @Override
     void cetakLinkungan(){
+        System.out.println("---HASIL ANALISIS LINGKUNGAN---");
         /*System.out.println("Sirkulasi udara: "+super.getSirkulasiUdara());
         System.out.println("Pencahayaan: "+super.getPencahayaan());
         System.out.println("Kelembapan: "+super.getKelembapan());
