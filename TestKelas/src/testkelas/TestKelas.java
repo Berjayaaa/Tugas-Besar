@@ -1,13 +1,12 @@
 
 package ruangkelas;
-
 import java.util.Scanner;
 
 public class KelasTest {
 
     public static void main(String[] jaya) {
         Scanner in=new Scanner(System.in);
-        RuangKelas r=new RuangKelas("123", "GKB 1", "PBO Java");
+        //RuangKelas r=new RuangKelas("123", "GKB 1", "PBO Java");
         ControlKelas[] c = new ControlKelas[1];
         Sarana[] s=new Sarana[1];
         Kebersihan[] b=new Kebersihan[1];
@@ -22,73 +21,70 @@ public class KelasTest {
             k[x]=new Kenyamanan();
             a[x]=new Keamanan();
             c[x].data(null, null, null);
-            //c[x].input1();
+            //c[x].inputData();
             c[x].hitungLuasRuang();
             c[x].hitungBentukRuang();
-            c[x].input2();
+            c[x].inputKursi();
             c[x].hitungRasioLuas();
-            c[x].input3();
+            c[x].inputPintuDanJendela();
             c[x].analisisPintuDanJendela();
-            s[x].input4();      
+            
+            s[x].inputKelistrikan();
             s[x].analisisKelistrikan();
-            s[x].input5();
+            s[x].inputLCD();
             s[x].analisisLCD();
-            s[x].input6();
+            s[x].inputLampu();
             s[x].analisisLampu();
-            s[x].input7();
+            s[x].inputKipasAngin();
             s[x].analisisKipasAngin();
-            s[x].input8();
+            s[x].inputAC();
             s[x].analisisAC();
-            s[x].input9();
+            s[x].inputInternet();
             s[x].analisisInternet();
-            s[x].input10();
+            s[x].inputCCTV();
             s[x].analisisCCTV();
-            b[x].inputkebersihan();
+            b[x].inputKebersihan();
+            
             b[x].analisisKebersihan();
-            /*kelas[x].input11();
-            kelas[x].analisisKebersihanLantai();
-            kelas[x].input12();
-            kelas[x].analisisKebersihanDinding();
-            kelas[x].input13();
-            kelas[x].analisisKebersihanAtap();
-            kelas[x].input14();
-            kelas[x].analisisKebersihanPintu();
-            kelas[x].input15();
-            kelas[x].analisisKebersihanJendela();*/
-            l[x].input16();
+            l[x].inputSirkulasiUdara();
             l[x].analisisSirkulasiUdara();
-            l[x].input17();
+            l[x].inputPencahayaan();
             l[x].analisisPencahayaan();
-            l[x].input18();
+            l[x].inputKelembapan();
             l[x].analisisKelembapan();
-            l[x].input19();
+            l[x].inputSuhu();
             l[x].analisisSuhu();
-            k[x].input20();
+            
+            k[x].inputKebisingan();
             k[x].analisisKebisingan();
-            k[x].input21();
+            k[x].inputBau();
             k[x].analisisBau();
-            k[x].input22();
+            k[x].inputKebocoran();
             k[x].analisisKebocoran();
-            k[x].input23();
+            k[x].inputKerusakan();
             k[x].analisisKerusakan();
-            k[x].input24();
+            k[x].inputKeausan();
             k[x].analisisKeausan();
-            //mulai:
+            
             String edit = "y";
             while(edit.equals("y")){
-            a[x].input25();
+            a[x].inputKekokohan();
             a[x].analisisKekokohan();
-            a[x].input26();
+            a[x].inputKunciPintu();
             a[x].analisisKunciPintu();
-            a[x].input27();
+            a[x].inputKunciJendela();
             a[x].analisisKunciJendela();
-            a[x].input28();
+            a[x].inputKeamanan();
             a[x].analisisKeamanan();
             
             System.out.println("edit (y/n): ");
             edit = in.nextLine();
-            c[x].cetakControl();
-            s[x].cetakSarana();
+            c[x].inputBelajar();
+            c[x].analisisBelajar();
+            //c[x].cetakControl();
+            c[x].cetak();
+            //s[x].cetakSarana();
+            s[x].cetak();
             b[x].cetakKebersihan();
             l[x].cetakLinkungan();
             k[x].cetakKenyamanan();
