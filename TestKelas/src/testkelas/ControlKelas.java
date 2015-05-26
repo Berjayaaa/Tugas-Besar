@@ -1,11 +1,16 @@
-package testkelas;
 
+package ruangkelas;
+
+
+import java.io.Serializable;
 import java.util.Scanner;
 
 
-public class ControlKelas extends RuangKelas implements Belajar{
+public class ControlKelas extends RuangKelas implements Belajar ,
+        Serializable
+{
 
-    Scanner in = new Scanner(System.in);
+    transient Scanner in = new Scanner(System.in);
     String papanTulis;
     String spidol;
     String penghapus;
@@ -14,7 +19,7 @@ public class ControlKelas extends RuangKelas implements Belajar{
     int sesuai=0;
     
   
-    @Override
+    /*@Override
     void data(String nama,String lokasi, String studi){
         System.out.print("Masukkan nama kelas: ");
         super.setNama(in.nextLine());
@@ -26,29 +31,29 @@ public class ControlKelas extends RuangKelas implements Belajar{
         super.setPanjang(in.nextDouble());
         System.out.print("Masukkan lebar kelas: ");
         super.setLebar(in.nextDouble());
-    }
-    /*void inputData() {
-        System.out.print("Masukkan nama kelas: ");
-        super.setNama(in.nextLine());
-        System.out.print("Masukkan lokasi: ");
-        super.setLokasi(in.nextLine());
-        System.out.print("Masukkan program studi: ");
-        super.setStudi(in.nextLine());
-        System.out.print("Masukkan panjang kelas: ");
-        super.setPanjang(in.nextDouble());
-        System.out.print("Masukkan lebar kelas: ");
-        super.setLebar(in.nextDouble());
-        
     }*/
+    void inputData() {
+        System.out.print("Masukkan nama kelas: ");
+        setNama(in.nextLine());
+        System.out.print("Masukkan lokasi: ");
+        setLokasi(in.nextLine());
+        System.out.print("Masukkan program studi: ");
+        setStudi(in.nextLine());
+        System.out.print("Masukkan panjang kelas: ");
+        setPanjang(in.nextDouble());
+        System.out.print("Masukkan lebar kelas: ");
+        setLebar(in.nextDouble());
+        
+    }
 
     double hitungLuasRuang() {
-        return super.getPanjang() * super.getLebar(); //rumus luas
+        return getPanjang() * super.getLebar(); //rumus luas
                
     }
 
     String hitungBentukRuang() {
         String bentuk;
-        if(super.getLebar().equals(super.getPanjang()) ){
+        if(getLebar().equals(getPanjang()) ){
             bentuk = "Bukan Persegi panjang";
             System.out.println("Bentuk: " + bentuk);
             System.out.println("TIDAK SESUAI");
@@ -64,12 +69,12 @@ public class ControlKelas extends RuangKelas implements Belajar{
     }
      void inputKursi(){
         System.out.print("Masukkan jumlah kursi: ");
-        super.setJmKursi(in.nextInt());
+        setJmKursi(in.nextInt());
     }
 
     double hitungRasioLuas() {
         double rasioluas;
-        rasioluas=hitungLuasRuang() / super.getJmKursi();
+        rasioluas=hitungLuasRuang() / getJmKursi();
         if(rasioluas>=0.5){
             totSesuai++;
             System.out.println("Rasio luas: SESUAI\n");
@@ -82,22 +87,22 @@ public class ControlKelas extends RuangKelas implements Belajar{
     
     void inputPintuDanJendela(){
         System.out.print("masukkan jumlah pintu: ");
-        super.setJmPintu(in.nextInt());
+        setJmPintu(in.nextInt());
         System.out.print("Masukkan jumlah jendela: ");
-        super.setJmJendela(in.nextInt());
+        setJmJendela(in.nextInt());
         
     }
     
     String analisisPintuDanJendela(){
         sesuai=0;
-        if(super.getJmPintu()>=2){
+        if(getJmPintu()>=2){
             System.out.println("Jumlah pintu SESUAI");
             sesuai++;            
         }
         else{
             System.out.println("Jumalah pintu TIDAK SESUAI");
         }
-        if(super.getJmJendela()>=1){
+        if(getJmJendela()>=1){
             System.out.println("Jumlah jendela SESUAI");
             sesuai++;
         }
