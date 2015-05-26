@@ -1,38 +1,40 @@
 
 package ruangkelas;
 
-public class Sarana extends ControlKelas{
+import java.io.Serializable;
+
+public class Sarana extends ControlKelas implements Serializable{
     public Sarana(){}
     
     @Override
     void inputKelistrikan(){
         System.out.print("Masukkan jumlah stop kontak/ steker: ");
-        super.setJmStopKontak(in.nextInt());
+        setJmStopKontak(in.nextInt());
         System.out.print("Masukkan jumlah stop kontak dalam kondisi BAIK: ");
-        super.setKonStopKontak(in.nextInt());
+        setKonStopKontak(in.nextInt());
         in.nextLine();
         System.out.print("masukkan posisi stop kontak (1. pojok ruang\n2. dekat dosen\n3. tmpat lain): ");
-        super.setPosStopKontak(in.nextInt());               
+        setPosStopKontak(in.nextInt());               
     }
     
     @Override
     String analisisKelistrikan(){
         sesuai=0;
-        if(super.getJmStopKontak()>=4){
+        if(getJmStopKontak()>=4){
             System.out.println("jumlah stop kontak SESUAI");
             sesuai++;
         }
         else{
             System.out.println("Jumlah Stop kontak TIDAK SESUAI");
         }
-        if(super.getKonStopKontak()>=4){
+        if(getKonStopKontak()>=4){
             System.out.println("kondisi steker BAIK");
             sesuai++;
         }
         else{
             System.out.println("Kondisi steker TIDAK BAIK");
         }
-        if(super.getPosStopKontak()==1 || super.getPosStopKontak()==2){
+        if(getPosStopKontak()==1 || getPosStopKontak()==2){
             System.out.println("posisi steker SESUAI");
             sesuai++;
         }
@@ -51,33 +53,33 @@ public class Sarana extends ControlKelas{
     @Override
     void inputLCD(){
         System.out.print("Masukkan jumlah kebel LCD: ");
-        super.setJmKabelLCD(in.nextInt());
+        setJmKabelLCD(in.nextInt());
         in.nextLine();
         System.out.print("Masukkan kondisi kabel LCD (1. berfungsi\n2.tidak berfungsi): ");
-        super.setKonKabelLCD(in.nextInt());
+        setKonKabelLCD(in.nextInt());
         System.out.print("Masukkan posisi kabel LCD (1. dekat dosen\n2. tempat lain): ");
-        super.setPosKabelLCD(in.nextInt());   
+        setPosKabelLCD(in.nextInt());   
         
     }
     
     @Override
     String analisisLCD(){
         sesuai=0;
-        if(super.getJmKabelLCD()>=1){
+        if(getJmKabelLCD()>=1){
             System.out.println("jumlah kabel LCD SESUAI");
             sesuai++;
         }
         else{
             System.out.println("jumlah kabel LCD TIDAK SESUAI");
         }
-        if(super.getKonKabelLCD()==1){
+        if(getKonKabelLCD()==1){
             System.out.println("kondisi kabel LCD SESUAI");
             sesuai++;
         }
         else{
             System.out.println("kondisi kebel LCD TIDAK SESUAI");
         }
-        if(super.getPosKabelLCD()==1){
+        if(getPosKabelLCD()==1){
             System.out.println("Posisi kabel LCD SESUAI");
             sesuai++;
         }
@@ -96,33 +98,33 @@ public class Sarana extends ControlKelas{
     @Override
     void inputLampu(){
         System.out.print("Masukkan jumlah lampu: ");
-        super.setJmLampu(in.nextInt());
+        setJmLampu(in.nextInt());
         System.out.print("Masukkan jumlah lampu dalam kondisi BAIK: ");
-        super.setKonLampu(in.nextInt());
+        setKonLampu(in.nextInt());
         in.nextLine();
         System.out.print("Masukkkan posisi lampu (1. atap ruangan\n2. tempat lain): ");
-        super.setPosLampu(in.nextInt());
+        setPosLampu(in.nextInt());
         
     }
     
     @Override
     String analisisLampu(){
         sesuai=0;
-        if(super.getJmLampu()>=18){
+        if(getJmLampu()>=18){
             System.out.println("Jumlah lampu SESUAI");
             sesuai++;
         }
         else{
             System.out.println("Jumlah lampu TIDAK SESUAI");
         }
-        if(super.getKonLampu()>=18){
+        if(getKonLampu()>=18){
             System.out.println("Kondisi lampu SESUAI");
             sesuai++;
         }
         else{
             System.out.println("Kondisi lampu TIDAK SESUAI");
         }
-        if(super.getPosLampu()==1){
+        if(getPosLampu()==1){
             System.out.println("posisi lampu SESUAI");
             sesuai++;
         }
@@ -141,33 +143,33 @@ public class Sarana extends ControlKelas{
     @Override
     void inputKipasAngin(){
         System.out.print("Masukkan jumlah kipas angin: ");
-        super.setJmKipas(in.nextInt());
+        setJmKipas(in.nextInt());
         System.out.print("masukkan jumlah kipas angin dalam kondisi BAIK: ");
-        super.setKonKipas(in.nextInt());
+        setKonKipas(in.nextInt());
         in.nextLine();
         System.out.print("Masukkan posisi kipas angin (1. belakang\n2. samping\n3. tempat lain): ");
-        super.setPosKipas(in.nextInt());
+        setPosKipas(in.nextInt());
         
     }
     
     @Override
     String analisisKipasAngin(){
         sesuai=0;
-        if(super.getJmKipas()>=2){
+        if(getJmKipas()>=2){
             System.out.println("Jumlah kipas angin SESUAI");
             sesuai++;
         }
         else{
             System.out.println("Jumlah kipas angin TIDAK SESUAI");
         }
-        if(super.getKonKipas()>=2){
+        if(getKonKipas()>=2){
             System.out.println("Kondisi kipas angin SESUAI");
             sesuai++;
         }
         else{
             System.out.println("KOndisi kipas angin TIDAK SESUAI");
         }
-        if(super.getPosKipas()==1 || super.getPosKipas()==2){
+        if(getPosKipas()==1 || super.getPosKipas()==2){
             System.out.println("Posisi kipas angin SESUAI");
             sesuai++;
         }
@@ -186,33 +188,33 @@ public class Sarana extends ControlKelas{
     @Override
     void inputAC(){
         System.out.print("Masukkan jumlah AC: ");
-        super.setJmAC(in.nextInt());
+        setJmAC(in.nextInt());
         in.nextLine();
         System.out.print("Masukkan kondisi AC(1. baik\n2. tidak baik): ");
-        super.setKonAC(in.nextInt());
+        setKonAC(in.nextInt());
         System.out.print("Masukkan posisi AC (1. belakang\n2. samping\n3. tempat lain): ");
-        super.setPosAC(in.nextInt());
+        setPosAC(in.nextInt());
         
     }
     
     @Override
     String analisisAC(){
         sesuai=0;
-        if(super.getJmAC()>=1){
+        if(getJmAC()>=1){
             System.out.println("jumlah AC SESUAI");
             sesuai++;
         }
         else{
             System.out.println("jumlah AC TIDAK SESUIA");
         }
-        if(super.getKonAC()==1){
+        if(getKonAC()==1){
             System.out.println("Kondisi AC SESUIA");
             sesuai++;
         }
         else{
             System.out.println("kondidi AC TIDAK SESUAI");
         }
-        if(super.getPosAC()==1|| super.getPosAC()==2){
+        if(getPosAC()==1|| super.getPosAC()==2){
             System.out.println("Posisi AC SESUAI");
             sesuai++;
         }
@@ -231,23 +233,23 @@ public class Sarana extends ControlKelas{
     @Override
     void inputInternet(){
         System.out.print("Masukkan pilihan SSID(1/ UMMHotspot\n2. SSID lain): ");
-        super.setSSID(in.nextInt());
+        setSSID(in.nextInt());
         System.out.print("Masukkan bandwidth (1. bisa login\n2. tidak bisa login): ");
-        super.setBanwidth(in.nextInt());
+        setBanwidth(in.nextInt());
         
     }
     
     @Override
     String analisisInternet(){
         sesuai=0;
-        if(super.getSSID()==1){
+        if(getSSID()==1){
             System.out.println("SSID SESUAI");
             sesuai++;
         }
         else{
             System.out.println("SSID TIDAK SESUAI");
         }
-        if(super.getBanwidth()==1){
+        if(getBanwidth()==1){
             System.out.println("bandwidth SESUAI");
             sesuai++;
         }
@@ -266,32 +268,32 @@ public class Sarana extends ControlKelas{
     @Override
     void inputCCTV(){
         System.out.print("Masukkan Jumlah CCCV: ");
-        super.setJmCCTV(in.nextInt());
+        setJmCCTV(in.nextInt());
         System.out.print("masukkan jumlah CCV dalam kondisi baik: ");
-        super.setKonCCTV(in.nextInt());
+        setKonCCTV(in.nextInt());
         in.nextLine();
         System.out.print("Masukkan posisi CCTV (1. depan\n2. belakang\n3. tempat lain): ");
-        super.setPosCCTV(in.nextInt());
+        setPosCCTV(in.nextInt());
     }
     
     @Override
     String analisisCCTV(){
         sesuai=0;
-        if(super.getJmCCTV()==2){
+        if(getJmCCTV()==2){
             System.out.println("Jumlah CCTV SESUAI");
             sesuai++;
         }
         else{
             System.out.println("Jumlah CCTV TIDAK SESUAI");
         }
-        if(super.getKonCCTV()==2){
+        if(getKonCCTV()==2){
             System.out.println("Kondisi CCTV SESUAI");
             sesuai++;
         }
         else{
             System.out.println("Kondisi CCTV TIDAK SESUAI");
         }
-        if(super.getPosCCTV()==1|| super.getPosCCTV()==2){
+        if(getPosCCTV()==1|| super.getPosCCTV()==2){
             System.out.println("Posisi CCTV SESUIA");
             sesuai++;
         }
