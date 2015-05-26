@@ -1,26 +1,27 @@
 
+package ruangkelas;
 
-package testkelas;
+import java.io.Serializable;
 
 
-public class Kebersihan extends ControlKelas{
+public class Kebersihan extends ControlKelas implements Serializable{
     void inputKebersihan(){
         System.out.print("Masukkan kondisi lantai(1. bersih\n2. tidak bersih): ");
-        super.setKonLantai(in.nextInt());
+        setKonLantai(in.nextInt());
         System.out.print("Masukkan kondisi dinding (1. bersih\n2. tidak bersih): ");
-        super.setKonDinding(in.nextInt());
+        setKonDinding(in.nextInt());
         System.out.print("masukkan kondisi atap(1. bersih\n2. tidak bersih): ");
-        super.setKonAtap(in.nextInt());
+        setKonAtap(in.nextInt());
         System.out.print("Masukkan kondisi pintu (1. bersih\n2. tidak bersih): ");
-        super.setKonPintu(in.nextInt());
+        setKonPintu(in.nextInt());
         System.out.print("Masukkan kondisi jendela (1. bersih\n2. tidak bersih): ");
-        super.setKonJendela(in.nextInt());
+        setKonJendela(in.nextInt());
     }
     @Override
     String analisisKebersihan(){
         sesuai=0;
         
-        if(super.getKonLantai()==1){
+        if(getKonLantai()==1){
             System.out.println("Kondisi lantai SESUAI");
             sesuai++;
         }
@@ -28,14 +29,14 @@ public class Kebersihan extends ControlKelas{
             System.out.println("Kondisi lantai TIDAK SESUAI");
         }
         
-        if(super.getKonDinding()==1){
-            System.out.println("Kondisi dinding SESUAI"); 
+        if(getKonDinding()==1){
+            System.out.println("Kondisi dinding SESUAI");
             sesuai++;
         }
         else{
         }
         
-        if(super.getKonAtap()==1){
+        if(getKonAtap()==1){
             System.out.println("Kondisi atap SESUAI");
             sesuai++;
         }
@@ -43,7 +44,7 @@ public class Kebersihan extends ControlKelas{
             System.out.println("Kondisi atap TIDAK SESUAI");
         }
        
-        if(super.getKonPintu()==1){
+        if(getKonPintu()==1){
             System.out.println("Kondisi pintu SESUAI");
             sesuai++;
         }
@@ -51,7 +52,7 @@ public class Kebersihan extends ControlKelas{
             System.out.println("Kondisi pintu TIDAK SESUAI");
         }
         
-        if(super.getKonJendela()==1){
+        if(getKonJendela()==1){
             System.out.println("Kondisi jendela SESUAI");
             sesuai++;
         }
