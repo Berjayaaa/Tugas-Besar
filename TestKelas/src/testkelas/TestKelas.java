@@ -35,7 +35,7 @@ public class KelasTest implements Serializable{
         KelasTest KS = new KelasTest();
         
         try{
-            ObjectInputStream is= new ObjectInputStream(new FileInputStream("data.ser"));
+            ObjectInputStream is= new ObjectInputStream(new FileInputStream("data.ata"));
             KS= (KelasTest)is.readObject();
             is.close();
             for(int x=0; x< KS.banyakRuang; x++){
@@ -55,8 +55,8 @@ public class KelasTest implements Serializable{
         
         
         for (int x = 0; x < KS.banyakRuang; x++) {
-            KS.c[x].data(null, null, null);
-            //c[x].inputData();
+            //KS.c[x].data(null, null, null);
+            KS.c[x].inputData();
             KS.c[x].hitungLuasRuang();
             KS.c[x].hitungBentukRuang();
             KS.c[x].inputKursi();
@@ -129,7 +129,7 @@ public class KelasTest implements Serializable{
 
         }
         try{
-            ObjectOutputStream os= new ObjectOutputStream(new FileOutputStream("data.ser"));
+            ObjectOutputStream os= new ObjectOutputStream(new FileOutputStream("data.ata"));
             os.writeObject(KS);
             os.close();
         }
