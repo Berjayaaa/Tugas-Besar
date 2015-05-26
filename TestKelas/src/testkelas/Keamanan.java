@@ -1,18 +1,20 @@
 
-package testkelas;
+package ruangkelas;
+
+import java.io.Serializable;
 
 
-public class Keamanan extends ControlKelas{
+public class Keamanan extends ControlKelas implements Serializable{
     
     @Override
     void inputKekokohan(){
         System.out.print("Masukkan kekokohan (1. kokoh\n2. tidak kokoh): ");
-        super.setKekokohan(in.nextInt());
+        setKekokohan(in.nextInt());
     }
     
     @Override
     String analisisKekokohan(){
-        if(super.getKekokohan()==2){
+        if(getKekokohan()==2){
             totSesuai++;
             return ("Kekokohan: SESUIA");
         }
@@ -24,12 +26,12 @@ public class Keamanan extends ControlKelas{
     @Override
     void inputKunciPintu(){
         System.out.print("Masukkan kunci pintu(1. ada\n2. tidak ada): ");
-        super.setKunciPintu(in.nextInt());        
+        setKunciPintu(in.nextInt());        
     }
     
     @Override
     String analisisKunciPintu(){
-        if(super.getKunciPintu()==1){ 
+        if(getKunciPintu()==1){
             totSesuai++;
             return ("Kunci pintu: SESUIA");
         }
@@ -41,12 +43,12 @@ public class Keamanan extends ControlKelas{
     @Override
     void inputKunciJendela(){
         System.out.print("Masukkan kunci jendela (1. ada\n2. tidak ada): ");
-        super.setKunciJendela(in.nextInt());
+        setKunciJendela(in.nextInt());
     }
     
     @Override
     String analisisKunciJendela(){
-        if(super.getKunciJendela()==1){
+        if(getKunciJendela()==1){
             totSesuai++;
             return ("Kunci jendela: SESUIA");
         }
@@ -58,12 +60,12 @@ public class Keamanan extends ControlKelas{
     @Override
     void inputKeamanan(){
         System.out.print("Masukkan bahaya (1. aman\n2. tidak aman): ");
-        super.setBahaya(in.nextInt());
+        setBahaya(in.nextInt());
     }
     
     @Override
     String analisisKeamanan(){
-        if(super.getBahaya()==1){
+        if(getBahaya()==1){
             totSesuai++;
             return ("Keamanan: SESUAI\n\n");
         }
