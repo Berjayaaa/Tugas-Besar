@@ -1,6 +1,9 @@
 package testkelas;
 
-abstract public class RuangKelas {
+import java.io.Serializable;
+
+
+abstract public class RuangKelas implements Serializable{
     public RuangKelas(){}
     
 
@@ -56,8 +59,8 @@ abstract public class RuangKelas {
         this.lokasi=lokasi;
         this.studi=studi;
     }
-    void data(){}
-    void data(String nama,String lokasi, String studi){}
+    void data(){}//overload
+    void data(String nama,String lokasi, String studi){};
     
     public String getNama() {
         return nama;
