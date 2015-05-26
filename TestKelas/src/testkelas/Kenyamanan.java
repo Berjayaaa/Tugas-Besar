@@ -1,18 +1,20 @@
 
-package testkelas;
+package ruangkelas;
+
+import java.io.Serializable;
 
 
-public class Kenyamanan extends ControlKelas{
+public class Kenyamanan extends ControlKelas implements Serializable{
     
     @Override
     void inputKebisingan(){
         System.out.print("Masukkan kebisingan (1. bising\n2. tidak bising): ");
-        super.setKebisingan(in.nextInt());
+        setKebisingan(in.nextInt());
     }
     
     @Override
     String analisisKebisingan(){
-        if(super.getKebisingan()==2){
+        if(getKebisingan()==2){
             totSesuai++;
             return ("Kebisingna: SESUAI");
         }
@@ -25,12 +27,12 @@ public class Kenyamanan extends ControlKelas{
     void inputBau(){
         
         System.out.print("Masukkan bau (1. bau\n2.  tidak bau): ");
-        super.setBau(in.nextInt());
+        setBau(in.nextInt());
     }
     
     @Override
     String analisisBau(){
-        if(super.getBau()==2){
+        if(getBau()==2){
             totSesuai++;
             return ("Bau: SESUAI");
         }
@@ -43,12 +45,12 @@ public class Kenyamanan extends ControlKelas{
     @Override
     void inputKebocoran(){
         System.out.print("Masukkan kebocoran (1. bocor\n2. tidak bocor): ");
-        super.setKebocoran(in.nextInt());
+        setKebocoran(in.nextInt());
     }
     
     @Override
     String analisisKebocoran(){
-        if(super.getKebocoran()==2){
+        if(getKebocoran()==2){
             totSesuai++;
             return ("Kebocoran: SESUAI");
         }
@@ -60,12 +62,12 @@ public class Kenyamanan extends ControlKelas{
     @Override
     void inputKerusakan(){
         System.out.print("Masukkan kerusakan (1. rusak\n2. tidak rusak): ");
-        super.setKerusakan(in.nextInt());
+        setKerusakan(in.nextInt());
     }
     
     @Override
     String analisisKerusakan(){
-        if(super.getKerusakan()==2){
+        if(getKerusakan()==2){
             totSesuai++;
             return ("Kerusakan: SESUIA");
         }
@@ -77,12 +79,12 @@ public class Kenyamanan extends ControlKelas{
     @Override
     void inputKeausan(){
         System.out.print("Masukkan keausan (1. aus\n2. tidak aus): ");
-        super.setKeausan(in.nextInt());
+        setKeausan(in.nextInt());
     }
     
     @Override
     String analisisKeausan(){
-        if(super.getKeausan()==2){
+        if(getKeausan()==2){
             totSesuai++;
             return ("Keausan: SESUIA\n\n");
         }
