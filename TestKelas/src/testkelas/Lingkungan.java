@@ -1,17 +1,19 @@
 
 package ruangkelas;
 
+import java.io.Serializable;
 
-public class Lingkungan extends ControlKelas{
+
+public class Lingkungan extends ControlKelas implements Serializable{
     @Override
     void inputSirkulasiUdara(){
         System.out.print("Masukkan kondisi sirkulasi udara (1.lancar\n2. tidak lancar): ");
-        super.setSirkulasiUdara(in.nextInt());
+        setSirkulasiUdara(in.nextInt());
     }
     
     @Override
     String analisisSirkulasiUdara(){
-        if(super.getSirkulasiUdara()==1){
+        if(getSirkulasiUdara()==1){
             totSesuai++;
             return ("Sirkulasi udara: SESUAI");
         }
@@ -24,12 +26,12 @@ public class Lingkungan extends ControlKelas{
     @Override
     void inputPencahayaan(){
         System.out.print("Masukkan nilai pencahayaan (angka): ");
-        super.setPencahayaan(in.nextInt());
+        setPencahayaan(in.nextInt());
     }
     
     @Override
     String analisisPencahayaan(){
-        if(super.getPencahayaan()>=250&& super.getPencahayaan()<=350){
+        if(getPencahayaan()>=250&& getPencahayaan()<=350){
             totSesuai++;
             return ("Pencahayaan: SESUAI");
         }
@@ -41,12 +43,12 @@ public class Lingkungan extends ControlKelas{
     @Override
     void inputKelembapan(){
         System.out.print("Masukkan nilai kelambapan (angka): ");
-        super.setKelembapan(in.nextDouble());
+        setKelembapan(in.nextDouble());
     }
     
     @Override
     String analisisKelembapan(){
-        if(super.getKelembapan()>=70&&super.getKelembapan()<=80){
+        if(getKelembapan()>=70&&getKelembapan()<=80){
             totSesuai++;
             return ("kelambapan: SESUAI");
         }
@@ -58,13 +60,13 @@ public class Lingkungan extends ControlKelas{
     @Override
     void inputSuhu(){
         System.out.print("Masukkan suhu (cecius): ");
-        super.setSuhu(in.nextDouble());
+        setSuhu(in.nextDouble());
         in.nextLine();
     }
     
     @Override
     String analisisSuhu(){
-        if(super.getSuhu()>=25&&super.getSuhu()<=35){
+        if(getSuhu()>=25&&getSuhu()<=35){
             totSesuai++;
             return ("Suhu: SESUAI\n\n");
         }
