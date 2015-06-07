@@ -1,0 +1,789 @@
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.ButtonGroup;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.JComboBox;
+import javax.swing.JCheckBox;
+import javax.swing.JScrollPane;
+import javax.swing.JButton;
+import javax.swing.JFormattedTextField;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JRadioButton;
+
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.Color;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.Font;
+
+
+public class Gui extends JPanel {
+
+	private JPanel contentPane;
+	private JTextField namaField;
+	private JTextField programField_2;
+	private JTextField panjangField_3;
+	private JTextField lebarField_4;
+	private JTextField kursiField_1;
+	private JTextField pintuField_5;
+	private JTextField jendelaField_6;
+	private JTextField jstekerField;
+	private JTextField stekerBaikField_1;
+	private JTextField pencahayaantextField;
+	private JTextField KelembapantextField_1;
+	private JTextField suhutextField_2;
+	private JTextField LCDtextField_3;
+	private JTextField lamputextField_4;
+	private JTextField lamputextField_5;
+	private JTextField kipastextField_6;
+	private JTextField kipastextField_7;
+	private JTextField ACtextField_8;
+	private JTextField CCTVtextField_9;
+	private JTextField CCTVtextField_10;
+
+	private KelasTest kelas;
+	//login log = new login();
+	/**
+	 * Launch the application.
+	 */
+	
+
+	/**
+	 * Create the frame.
+	 */
+	public Gui() {
+		//setResizable(false);
+		//setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 1111, 491);
+		contentPane = new JPanel();
+		
+		setBackground(Color.BLACK);
+		setBorder(new EmptyBorder(5, 5, 5, 5));
+		//setContentPane(log);
+		setLayout(null);
+		
+		JPanel panel = new JPanel();
+		panel.setBackground(new Color(221, 160, 221));
+		panel.setBounds(78, 21, 89, 14);
+		add(panel);
+		panel.setLayout(null);
+		
+		JLabel lblData = new JLabel("Data");
+		lblData.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblData.setBounds(26, 0, 28, 14);
+		panel.add(lblData);
+		
+		JLabel lblNama = new JLabel("Nama :");
+		lblNama.setBounds(30, 46, 99, 14);
+		add(lblNama);
+		
+		namaField = new JTextField();
+		namaField.setBounds(139, 43, 86, 20);
+		add(namaField);
+		namaField.setColumns(10);
+		
+		JLabel lblLokasi = new JLabel("Lokasi :");
+		lblLokasi.setBounds(30, 71, 99, 14);
+		add(lblLokasi);
+		
+		JLabel lblProgramStudi = new JLabel("Program studi :");
+		lblProgramStudi.setBounds(30, 96, 99, 14);
+		add(lblProgramStudi);
+		
+		programField_2 = new JTextField();
+		programField_2.setBounds(139, 93, 86, 20);
+		add(programField_2);
+		programField_2.setColumns(10);
+		
+		JLabel lblPanjangKelas = new JLabel("Panjang kelas :");
+		lblPanjangKelas.setBounds(30, 121, 99, 14);
+		add(lblPanjangKelas);
+		
+		panjangField_3 = new JTextField();
+		panjangField_3.setBounds(139, 118, 46, 20);
+		add(panjangField_3);
+		panjangField_3.setColumns(10);
+		
+		JLabel lblLebarKelas = new JLabel("Lebar kelas :");
+		lblLebarKelas.setBounds(30, 146, 99, 14);
+		add(lblLebarKelas);
+		
+		lebarField_4 = new JTextField();
+		lebarField_4.setBounds(139, 143, 46, 20);
+		add(lebarField_4);
+		lebarField_4.setColumns(10);
+		
+		JComboBox lokasicomboBox = new JComboBox();
+		lokasicomboBox.setModel(new DefaultComboBoxModel(new String[] {"GKB 1", "GKB 2", "GKB 3"}));
+		lokasicomboBox.setBounds(139, 68, 86, 20);
+		add(lokasicomboBox);
+		
+		JLabel lblJumlahKursi = new JLabel("Jumlah Kursi :");
+		lblJumlahKursi.setBounds(30, 171, 99, 14);
+		add(lblJumlahKursi);
+		
+		kursiField_1 = new JTextField();
+		kursiField_1.setBounds(139, 168, 46, 20);
+		add(kursiField_1);
+		kursiField_1.setColumns(10);
+		
+		JLabel lblJumlahPintu = new JLabel("Jumlah pintu :");
+		lblJumlahPintu.setBounds(30, 196, 99, 14);
+		add(lblJumlahPintu);
+		
+		pintuField_5 = new JTextField();
+		pintuField_5.setBounds(139, 193, 46, 20);
+		add(pintuField_5);
+		pintuField_5.setColumns(10);
+		
+		JLabel lblJumlahJenjela = new JLabel("Jumlah jendela :");
+		lblJumlahJenjela.setBounds(30, 221, 99, 14);
+		add(lblJumlahJenjela);
+		
+		jendelaField_6 = new JTextField();
+		jendelaField_6.setBounds(139, 218, 46, 20);
+		add(jendelaField_6);
+		jendelaField_6.setColumns(10);
+		
+		JButton btnNext = new JButton("Analisis");
+		btnNext.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		
+		btnNext.setBounds(884, 357, 195, 74);
+		add(btnNext);
+		
+		JLabel lblJumlahSteker = new JLabel("Jumlah Steker :");
+		lblJumlahSteker.setBounds(30, 296, 99, 14);
+		add(lblJumlahSteker);
+		
+		jstekerField = new JTextField();
+		jstekerField.setBounds(139, 293, 46, 20);
+		add(jstekerField);
+		jstekerField.setColumns(10);
+		
+		JLabel lblJumlahStekerDalam = new JLabel("Jumlah steker dalam kondisi baik:");
+		lblJumlahStekerDalam.setBounds(30, 321, 195, 14);
+		add(lblJumlahStekerDalam);
+		
+		stekerBaikField_1 = new JTextField();
+		stekerBaikField_1.setBounds(139, 338, 46, 20);
+		add(stekerBaikField_1);
+		stekerBaikField_1.setColumns(10);
+		
+		JLabel lblPosisiSteker = new JLabel("Posisi steker :");
+		lblPosisiSteker.setBounds(30, 370, 99, 14);
+		add(lblPosisiSteker);
+		
+		JLabel lblSarana = new JLabel("Sarana");
+		lblSarana.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblSarana.setBounds(95, 271, 46, 14);
+		add(lblSarana);
+		
+		JLabel lblKebwrsihan = new JLabel("Kebersihan");
+		lblKebwrsihan.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblKebwrsihan.setBounds(650, 144, 90, 14);
+		add(lblKebwrsihan);
+		
+		JLabel lblKondisiLantai = new JLabel("Kondisi lantai:");
+		lblKondisiLantai.setBounds(592, 169, 89, 14);
+		add(lblKondisiLantai);
+		
+		JLabel lblKondisiDinding = new JLabel("Kondisi dinding:");
+		lblKondisiDinding.setBounds(592, 194, 89, 14);
+		add(lblKondisiDinding);
+		
+		JLabel lblKondisiAtap = new JLabel("Kondisi atap:");
+		lblKondisiAtap.setBounds(592, 219, 78, 14);
+		add(lblKondisiAtap);
+		
+		JLabel lblKondisiPintu = new JLabel("Kondisi pintu:");
+		lblKondisiPintu.setBounds(592, 244, 89, 14);
+		add(lblKondisiPintu);
+		
+		JLabel lblKondisiJendela = new JLabel("Kondisi jendela:");
+		lblKondisiJendela.setBounds(592, 269, 89, 14);
+		add(lblKondisiJendela);
+		
+		ButtonGroup lantai = new ButtonGroup();
+		ButtonGroup dinding = new ButtonGroup();
+		ButtonGroup atap = new ButtonGroup();
+		ButtonGroup pintu = new ButtonGroup();
+		ButtonGroup jendela = new ButtonGroup();
+		
+		JRadioButton lantairdbtnBersih = new JRadioButton("bersih");
+		lantairdbtnBersih.setBackground(Color.GREEN);
+		lantairdbtnBersih.setBounds(687, 170, 62, 14);
+		lantai.add(lantairdbtnBersih);
+		add(lantairdbtnBersih);
+		
+		JRadioButton lantairdbtnKotor = new JRadioButton("kotor");
+		lantairdbtnKotor.setBackground(Color.GREEN);
+		lantairdbtnKotor.setBounds(751, 170, 62, 14);
+		lantai.add(lantairdbtnKotor);
+		add(lantairdbtnKotor);
+		
+		JRadioButton dindingradioButton = new JRadioButton("bersih");
+		dindingradioButton.setBackground(Color.GREEN);
+		dindingradioButton.setBounds(687, 194, 62, 14);
+		dinding.add(dindingradioButton);
+		add(dindingradioButton);
+		
+		JRadioButton dindingradioButton_1 = new JRadioButton("kotor");
+		dindingradioButton_1.setBackground(Color.GREEN);
+		dindingradioButton_1.setBounds(751, 194, 62, 14);
+		dinding.add(dindingradioButton_1);
+		add(dindingradioButton_1);
+		
+		JRadioButton atapradioButton_2 = new JRadioButton("bersih");
+		atapradioButton_2.setBackground(Color.GREEN);
+		atapradioButton_2.setBounds(687, 219, 62, 14);
+		atap.add(atapradioButton_2);
+		add(atapradioButton_2);
+		
+		JRadioButton atapradioButton_3 = new JRadioButton("kotor");
+		atapradioButton_3.setBackground(Color.GREEN);
+		atapradioButton_3.setBounds(751, 219, 62, 14);
+		atap.add(atapradioButton_3);
+		add(atapradioButton_3);
+		
+		JRadioButton pinturadioButton_4 = new JRadioButton("bersih");
+		pinturadioButton_4.setBackground(Color.GREEN);
+		pinturadioButton_4.setBounds(687, 244, 62, 14);
+		pintu.add(pinturadioButton_4);
+		add(pinturadioButton_4);
+		
+		JRadioButton pinturadioButton_5 = new JRadioButton("kotor");
+		pinturadioButton_5.setBackground(Color.GREEN);
+		pinturadioButton_5.setBounds(751, 244, 62, 14);
+		pintu.add(pinturadioButton_5);
+		add(pinturadioButton_5);
+		
+		JRadioButton jendelaradioButton_6 = new JRadioButton("bersih");
+		jendelaradioButton_6.setBackground(Color.GREEN);
+		jendelaradioButton_6.setBounds(687, 269, 62, 14);
+		jendela.add(jendelaradioButton_6);
+		add(jendelaradioButton_6);
+		
+		JRadioButton jendelaradioButton_7 = new JRadioButton("kotor");
+		jendelaradioButton_7.setBackground(Color.GREEN);
+		jendelaradioButton_7.setBounds(751, 269, 62, 14);
+		jendela.add(jendelaradioButton_7);
+		add(jendelaradioButton_7);
+		
+		JLabel lblLingkugna = new JLabel("Lingkungan");
+		lblLingkugna.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblLingkugna.setBounds(661, 323, 79, 14);
+		add(lblLingkugna);
+		
+		JLabel lblSirkulasiUdara = new JLabel("Sirkulasi udara:");
+		lblSirkulasiUdara.setBounds(592, 351, 89, 14);
+		add(lblSirkulasiUdara);
+		
+		ButtonGroup udara=new ButtonGroup();
+		
+		JRadioButton udararadio1 = new JRadioButton("lancar");
+		udararadio1.setBackground(Color.YELLOW);
+		udararadio1.setBounds(687, 351, 62, 14);
+		udara.add(udararadio1);
+		add(udararadio1);
+		
+		JRadioButton udararadio2 = new JRadioButton("tidak lancar");
+		udararadio2.setBackground(Color.YELLOW);
+		udararadio2.setBounds(751, 351, 89, 14);
+		udara.add(udararadio2);
+		add(udararadio2);
+		
+		JLabel lblNewLabel = new JLabel("pencahayaan :");
+		lblNewLabel.setBounds(592, 376, 89, 14);
+		add(lblNewLabel);
+		
+		JLabel lblKelembapan = new JLabel("kelembapan :");
+		lblKelembapan.setBounds(592, 401, 89, 14);
+		add(lblKelembapan);
+		
+		JLabel lblSuhu = new JLabel("Suhu :");
+		lblSuhu.setBounds(592, 426, 78, 14);
+		add(lblSuhu);
+		
+		
+		
+		pencahayaantextField = new JTextField();
+		pencahayaantextField.setBounds(707, 374, 46, 20);
+		add(pencahayaantextField);
+		pencahayaantextField.setColumns(10);
+		
+		KelembapantextField_1 = new JTextField();
+		KelembapantextField_1.setBounds(707, 401, 46, 20);
+		add(KelembapantextField_1);
+		KelembapantextField_1.setColumns(10);
+		
+		suhutextField_2 = new JTextField();
+		suhutextField_2.setBounds(707, 423, 34, 20);
+		add(suhutextField_2);
+		suhutextField_2.setColumns(10);
+		
+		JLabel lblCelsius = new JLabel("celsius");
+		lblCelsius.setBounds(751, 426, 46, 14);
+		add(lblCelsius);
+		
+		JLabel lblKenyamanan = new JLabel("Kenyamanan");
+		lblKenyamanan.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblKenyamanan.setBounds(936, 27, 78, 14);
+		add(lblKenyamanan);
+		
+		JLabel lblNewLabel_1 = new JLabel("Kebisingan:");
+		lblNewLabel_1.setBounds(878, 46, 84, 14);
+		add(lblNewLabel_1);
+		
+		JLabel lblBau = new JLabel("Bau :");
+		lblBau.setBounds(878, 71, 46, 14);
+		add(lblBau);
+		
+		JLabel lblKebocoran = new JLabel("Kebocoran :");
+		lblKebocoran.setBounds(878, 96, 95, 14);
+		add(lblKebocoran);
+		
+		JLabel lblNewLabel_2 = new JLabel("kerusaskan :");
+		lblNewLabel_2.setBounds(878, 121, 78, 14);
+		add(lblNewLabel_2);
+		
+		JLabel lblKeausan = new JLabel("Keausan :");
+		lblKeausan.setBounds(878, 146, 78, 14);
+		add(lblKeausan);
+		
+		JLabel lblJumlahKabelLcd = new JLabel("Jumlah kabel LCD:");
+		lblJumlahKabelLcd.setBounds(30, 424, 111, 14);
+		add(lblJumlahKabelLcd);
+		
+		LCDtextField_3 = new JTextField();
+		LCDtextField_3.setBounds(139, 421, 46, 20);
+		add(LCDtextField_3);
+		LCDtextField_3.setColumns(10);
+		
+		JLabel lblKondisiKabelLcd = new JLabel("Kondisi kabel LCD:");
+		lblKondisiKabelLcd.setBounds(287, 24, 109, 14);
+		add(lblKondisiKabelLcd);
+		
+		JLabel lblPosisiKabelLcd = new JLabel("posisi kabel LCD:");
+		lblPosisiKabelLcd.setBounds(287, 49, 109, 14);
+		add(lblPosisiKabelLcd);
+		
+		JLabel lblJumlahLampu = new JLabel("Jumlah lampu:");
+		lblJumlahLampu.setBounds(287, 99, 89, 14);
+		add(lblJumlahLampu);
+		
+		lamputextField_4 = new JTextField();
+		lamputextField_4.setBounds(418, 96, 46, 20);
+		add(lamputextField_4);
+		lamputextField_4.setColumns(10);
+		
+		JLabel lblLampuDalamKodisi = new JLabel("Lampu kodisi baik:");
+		lblLampuDalamKodisi.setBounds(287, 124, 136, 14);
+		add(lblLampuDalamKodisi);
+		
+		lamputextField_5 = new JTextField();
+		lamputextField_5.setBounds(418, 121, 46, 20);
+		add(lamputextField_5);
+		lamputextField_5.setColumns(10);
+		
+		JLabel lblPosisiLampu = new JLabel("posisi lampu:");
+		lblPosisiLampu.setBounds(287, 149, 89, 14);
+		add(lblPosisiLampu);
+		
+		JLabel lblJumlahKipasAngin = new JLabel("Jumlah kipas angin:");
+		lblJumlahKipasAngin.setBounds(287, 199, 121, 14);
+		add(lblJumlahKipasAngin);
+		
+		kipastextField_6 = new JTextField();
+		kipastextField_6.setBounds(418, 196, 46, 20);
+		add(kipastextField_6);
+		kipastextField_6.setColumns(10);
+		
+		JLabel lblKipasDalmKondisi = new JLabel("kipas kondisi baik:");
+		lblKipasDalmKondisi.setBounds(287, 224, 136, 14);
+		add(lblKipasDalmKondisi);
+		
+		kipastextField_7 = new JTextField();
+		kipastextField_7.setBounds(418, 221, 46, 20);
+		add(kipastextField_7);
+		kipastextField_7.setColumns(10);
+		
+		JLabel lblPosisiKipas = new JLabel("posisi kipas:");
+		lblPosisiKipas.setBounds(287, 247, 84, 14);
+		add(lblPosisiKipas);
+		
+		JCheckBox kipaschckbxNewCheckBox = new JCheckBox("belakang");
+		kipaschckbxNewCheckBox.setBackground(Color.CYAN);
+		kipaschckbxNewCheckBox.setBounds(418, 247, 97, 14);
+		add(kipaschckbxNewCheckBox);
+		
+		JCheckBox kipaschckbxSamping = new JCheckBox("samping");
+		kipaschckbxSamping.setBackground(Color.CYAN);
+		kipaschckbxSamping.setBounds(418, 264, 97, 14);
+		add(kipaschckbxSamping);
+		
+		JCheckBox kipaschckbxTempatLain_2 = new JCheckBox("tempat lain");
+		kipaschckbxTempatLain_2.setBackground(Color.CYAN);
+		kipaschckbxTempatLain_2.setBounds(418, 281, 97, 14);
+		add(kipaschckbxTempatLain_2);
+		
+		JComboBox LCDcomboBox_1 = new JComboBox();
+		LCDcomboBox_1.setModel(new DefaultComboBoxModel(new String[] {"berfungsi", "tidak berfungsi"}));
+		LCDcomboBox_1.setBounds(422, 21, 81, 20);
+		add(LCDcomboBox_1);
+		
+		JLabel lblJumlahAc = new JLabel("Jumlah AC:");
+		lblJumlahAc.setBounds(287, 302, 89, 14);
+		add(lblJumlahAc);
+		
+		ACtextField_8 = new JTextField();
+		ACtextField_8.setBounds(418, 299, 46, 20);
+		add(ACtextField_8);
+		ACtextField_8.setColumns(10);
+		
+		JLabel lblKondisiAc = new JLabel("Kondisi AC:");
+		lblKondisiAc.setBounds(287, 324, 82, 14);
+		add(lblKondisiAc);
+		
+		JComboBox ACkondisi = new JComboBox();
+		ACkondisi.setModel(new DefaultComboBoxModel(new String[] {"baik", "tidak baik"}));
+		ACkondisi.setBounds(418, 321, 86, 20);
+		add(ACkondisi);
+		
+		JLabel lblPosisiAc = new JLabel("Posisi AC:");
+		lblPosisiAc.setBounds(287, 344, 84, 14);
+		add(lblPosisiAc);
+		
+		JLabel lblSsid = new JLabel("SSID:");
+		lblSsid.setBounds(286, 407, 90, 14);
+		add(lblSsid);
+		
+		JComboBox SSIDcomboBox_3 = new JComboBox();
+		SSIDcomboBox_3.setModel(new DefaultComboBoxModel(new String[] {"UMMhotspot", "SSID lain"}));
+		SSIDcomboBox_3.setBounds(418, 404, 85, 20);
+		add(SSIDcomboBox_3);
+		
+		JLabel lblBandwith = new JLabel("bandwidth:");
+		lblBandwith.setBounds(287, 431, 89, 14);
+		add(lblBandwith);
+		
+		JComboBox bandwidthcomboBox_4 = new JComboBox();
+		bandwidthcomboBox_4.setModel(new DefaultComboBoxModel(new String[] {"Bisa login", "tidak bisa"}));
+		bandwidthcomboBox_4.setBounds(418, 428, 85, 20);
+		add(bandwidthcomboBox_4);
+		
+		JLabel lblJumlahCctv = new JLabel("Jumlah CCTV:");
+		lblJumlahCctv.setBounds(592, 24, 89, 14);
+		add(lblJumlahCctv);
+		
+		CCTVtextField_9 = new JTextField();
+		CCTVtextField_9.setBounds(707, 21, 46, 20);
+		add(CCTVtextField_9);
+		CCTVtextField_9.setColumns(10);
+		
+		JLabel lblCctcKondisiBaik = new JLabel("CCTC kondisi baik:");
+		lblCctcKondisiBaik.setBounds(592, 49, 136, 14);
+		add(lblCctcKondisiBaik);
+		
+		CCTVtextField_10 = new JTextField();
+		CCTVtextField_10.setBounds(707, 46, 46, 20);
+		add(CCTVtextField_10);
+		CCTVtextField_10.setColumns(10);
+		
+		JLabel lblPosisiCctv = new JLabel("Posisi CCTV:");
+		lblPosisiCctv.setBounds(592, 74, 109, 14);
+		add(lblPosisiCctv);
+		
+		JComboBox kebisingancomboBox_5 = new JComboBox();
+		kebisingancomboBox_5.setModel(new DefaultComboBoxModel(new String[] {"bising", "tidak bising"}));
+		kebisingancomboBox_5.setBounds(978, 43, 89, 20);
+		add(kebisingancomboBox_5);
+		
+		JComboBox baucomboBox_6 = new JComboBox();
+		baucomboBox_6.setModel(new DefaultComboBoxModel(new String[] {"bau", "tidak bau"}));
+		baucomboBox_6.setBounds(978, 68, 89, 20);
+		add(baucomboBox_6);
+		
+		JComboBox kebocorancomboBox_7 = new JComboBox();
+		kebocorancomboBox_7.setModel(new DefaultComboBoxModel(new String[] {"bocor", "tidak bocor"}));
+		kebocorancomboBox_7.setBounds(978, 93, 89, 20);
+		add(kebocorancomboBox_7);
+		
+		JComboBox kerusakancomboBox_8 = new JComboBox();
+		kerusakancomboBox_8.setModel(new DefaultComboBoxModel(new String[] {"rusak", "tidak rusak"}));
+		kerusakancomboBox_8.setBounds(978, 118, 89, 20);
+		add(kerusakancomboBox_8);
+		
+		JComboBox keausancomboBox_9 = new JComboBox();
+		keausancomboBox_9.setModel(new DefaultComboBoxModel(new String[] {"aus", "tidak aus"}));
+		keausancomboBox_9.setBounds(978, 143, 89, 20);
+		add(keausancomboBox_9);
+		
+		JLabel lblKeamanan = new JLabel("Keamanan");
+		lblKeamanan.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblKeamanan.setBounds(936, 193, 78, 14);
+		add(lblKeamanan);
+		
+		JLabel lblKekokohan = new JLabel("Kekokohan:");
+		lblKekokohan.setBounds(878, 217, 95, 14);
+		add(lblKekokohan);
+		
+		JLabel lblKunciPintu = new JLabel("Kunci pintu:");
+		lblKunciPintu.setBounds(878, 244, 99, 14);
+		add(lblKunciPintu);
+		
+		JLabel lblKunciJendela = new JLabel("Kunci jendela:");
+		lblKunciJendela.setBounds(878, 269, 95, 14);
+		add(lblKunciJendela);
+		
+		JLabel lblBahaya = new JLabel("Bahaya:");
+		lblBahaya.setBounds(878, 294, 86, 14);
+		add(lblBahaya);
+		
+		JComboBox kekokohancomboBox_10 = new JComboBox();
+		kekokohancomboBox_10.setModel(new DefaultComboBoxModel(new String[] {"kokoh", "tidak kokoh"}));
+		kekokohancomboBox_10.setBounds(978, 214, 89, 20);
+		add(kekokohancomboBox_10);
+		
+		JComboBox pintucomboBox_11 = new JComboBox();
+		pintucomboBox_11.setModel(new DefaultComboBoxModel(new String[] {"ada", "tidak ada"}));
+		pintucomboBox_11.setBounds(978, 241, 89, 20);
+		add(pintucomboBox_11);
+		
+		JComboBox jendelacomboBox_12 = new JComboBox();
+		jendelacomboBox_12.setModel(new DefaultComboBoxModel(new String[] {"ada", "tidak ada"}));
+		jendelacomboBox_12.setBounds(978, 268, 89, 20);
+		add(jendelacomboBox_12);
+		
+		JComboBox bahayacomboBox_13 = new JComboBox();
+		bahayacomboBox_13.setModel(new DefaultComboBoxModel(new String[] {"aman", "tidak aman"}));
+		bahayacomboBox_13.setBounds(978, 293, 89, 20);
+		add(bahayacomboBox_13);
+		
+		JPanel panel_1 = new JPanel();
+		panel_1.setBackground(new Color(221, 160, 221));
+		panel_1.setBounds(10, 11, 238, 238);
+		add(panel_1);
+		
+		JPanel panel_2 = new JPanel();
+		panel_2.setBackground(Color.CYAN);
+		panel_2.setBounds(10, 261, 238, 207);
+		add(panel_2);
+		panel_2.setLayout(null);
+		
+		JRadioButton stekerrdbtnPojokRuang = new JRadioButton("pojok ruang &");
+		stekerrdbtnPojokRuang.setBackground(Color.CYAN);
+		stekerrdbtnPojokRuang.setBounds(123, 105, 115, 16);
+		panel_2.add(stekerrdbtnPojokRuang);
+		
+		JLabel lblDekatDosen = new JLabel("dekat dosen");
+		lblDekatDosen.setBounds(143, 120, 95, 14);
+		panel_2.add(lblDekatDosen);
+		
+		JRadioButton stekerrdbtnTempatLain = new JRadioButton("tempat lain");
+		stekerrdbtnTempatLain.setBackground(Color.CYAN);
+		stekerrdbtnTempatLain.setBounds(123, 136, 109, 23);
+		panel_2.add(stekerrdbtnTempatLain);
+		
+		JPanel panel_3 = new JPanel();
+		panel_3.setBackground(Color.CYAN);
+		panel_3.setBounds(258, 11, 287, 457);
+		add(panel_3);
+		panel_3.setLayout(null);
+		
+		JRadioButton lcdrdbtnDekatDosen = new JRadioButton("dekat dosen");
+		lcdrdbtnDekatDosen.setBackground(Color.CYAN);
+		lcdrdbtnDekatDosen.setBounds(159, 33, 109, 23);
+		panel_3.add(lcdrdbtnDekatDosen);
+		
+		JRadioButton lcdrdbtnTempatLain_1 = new JRadioButton("tempat lain");
+		lcdrdbtnTempatLain_1.setBackground(Color.CYAN);
+		lcdrdbtnTempatLain_1.setBounds(159, 57, 109, 23);
+		panel_3.add(lcdrdbtnTempatLain_1);
+		
+		JRadioButton lampurdbtnAtapRuang = new JRadioButton("atap ruang");
+		lampurdbtnAtapRuang.setBackground(Color.CYAN);
+		lampurdbtnAtapRuang.setBounds(159, 134, 109, 23);
+		panel_3.add(lampurdbtnAtapRuang);
+		
+		JRadioButton lampurdbtnTempatLain_2 = new JRadioButton("tempat lain");
+		lampurdbtnTempatLain_2.setBackground(Color.CYAN);
+		lampurdbtnTempatLain_2.setBounds(159, 160, 109, 23);
+		panel_3.add(lampurdbtnTempatLain_2);
+		
+		JRadioButton acrdbtnBelakangSamping = new JRadioButton("belakang/ samping");
+		acrdbtnBelakangSamping.setBackground(Color.CYAN);
+		acrdbtnBelakangSamping.setBounds(159, 332, 128, 17);
+		panel_3.add(acrdbtnBelakangSamping);
+		
+		JRadioButton acrdbtnTempatLain_3 = new JRadioButton("tempat lain");
+		acrdbtnTempatLain_3.setBackground(Color.CYAN);
+		acrdbtnTempatLain_3.setBounds(159, 352, 109, 23);
+		panel_3.add(acrdbtnTempatLain_3);
+		
+		JPanel panel_4 = new JPanel();
+		panel_4.setBackground(Color.CYAN);
+		panel_4.setBounds(555, 11, 287, 115);
+		add(panel_4);
+		panel_4.setLayout(null);
+		
+		JRadioButton cctvrdbtnDepanBelakang = new JRadioButton("depan/ belakang");
+		cctvrdbtnDepanBelakang.setBackground(Color.CYAN);
+		cctvrdbtnDepanBelakang.setBounds(153, 58, 134, 23);
+		panel_4.add(cctvrdbtnDepanBelakang);
+		
+		JRadioButton cctvrdbtnTempatLain_4 = new JRadioButton("tempat lain");
+		cctvrdbtnTempatLain_4.setBackground(Color.CYAN);
+		cctvrdbtnTempatLain_4.setBounds(153, 84, 109, 13);
+		panel_4.add(cctvrdbtnTempatLain_4);
+		
+		JPanel panel_5 = new JPanel();
+		panel_5.setBackground(Color.GREEN);
+		panel_5.setBounds(555, 138, 287, 172);
+		add(panel_5);
+		
+		JPanel panel_7 = new JPanel();
+		panel_7.setBackground(Color.PINK);
+		panel_7.setBounds(852, 11, 243, 161);
+		add(panel_7);
+		
+		JPanel panel_6 = new JPanel();
+		panel_6.setBackground(Color.YELLOW);
+		panel_6.setBounds(555, 321, 287, 147);
+		add(panel_6);
+		
+		JPanel panel_8 = new JPanel();
+		panel_8.setBackground(Color.ORANGE);
+		panel_8.setBounds(852, 184, 243, 151);
+		add(panel_8);
+		
+		btnNext.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+				kelas.c.setNama(namaField.getText());
+				kelas.c.setLokasi(lokasicomboBox.getSelectedItem().toString());
+				kelas.c.setStudi(programField_2.getText());
+				kelas.c.setPanjang(Double.parseDouble(panjangField_3.getText()));
+				kelas.c.setLebar(Double.parseDouble(lebarField_4.getText()));
+				kelas.c.setJmKursi(Integer.parseInt(kursiField_1.getText()));
+				kelas.c.setJmPintu(Integer.parseInt(pintuField_5.getText()));
+				kelas.c.setJmJendela(Integer.parseInt(jendelaField_6.getText()));
+				//================================================================================
+				kelas.s.setJmStopKontak(Integer.parseInt(jstekerField.getText()));
+				kelas.s.setKonStopKontak(Integer.parseInt(stekerBaikField_1.getText()));
+				
+				if(stekerrdbtnPojokRuang.isSelected()){
+					kelas.s.setPosStopKontak(stekerrdbtnPojokRuang.getText());
+				}else if(stekerrdbtnTempatLain.isSelected()){
+					kelas.s.setPosStopKontak(stekerrdbtnTempatLain.getText());
+				}
+				
+				kelas.s.setJmKabelLCD(Integer.parseInt(LCDtextField_3.getText()));
+				kelas.s.setKonKabelLCD(LCDcomboBox_1.getSelectedItem().toString());
+				// belum posisi lcd
+				if(lcdrdbtnDekatDosen.isSelected()){
+					kelas.s.setPosKabelLCD(lcdrdbtnDekatDosen.getText());
+				}else if(lcdrdbtnTempatLain_1.isSelected()){
+					kelas.s.setPosKabelLCD(lcdrdbtnTempatLain_1.getText());
+				}
+				
+				kelas.s.setJmLampu(Integer.parseInt(lamputextField_4.getText()));
+				kelas.s.setKonLampu(Integer.parseInt(lamputextField_5.getText()));
+				///belum posisi lampu
+				if(lampurdbtnAtapRuang.isSelected()){
+					kelas.s.setPosLampu(lampurdbtnAtapRuang.getText());
+				}else if(lampurdbtnTempatLain_2.isSelected()){
+				kelas.s.setPosLampu(lampurdbtnTempatLain_2.getText());
+				}
+				
+				kelas.s.setJmKipas(Integer.parseInt(kipastextField_6.getText()));
+				kelas.s.setKonKipas(Integer.parseInt(kipastextField_7.getText()));
+				// belum posisi kipas
+				if(kipaschckbxSamping.isSelected()){
+					kelas.s.setPosKipas(kipaschckbxSamping.getText());
+				}
+				else if(kipaschckbxTempatLain_2.isSelected()){
+					kelas.s.setPosKipas(kipaschckbxTempatLain_2.getText());
+				}
+				kelas.s.setJmAC(Integer.parseInt(ACtextField_8.getText()));
+				kelas.s.setKonAC(ACkondisi.getSelectedItem().toString());
+				// belum posisi ac
+				if(acrdbtnBelakangSamping.isSelected()){
+					kelas.s.setPosAC(acrdbtnBelakangSamping.getText());
+				}
+				else if(acrdbtnTempatLain_3.isSelected()){
+					kelas.s.setPosAC(acrdbtnTempatLain_3.getText());
+				}
+				kelas.s.setJmCCTV(Integer.parseInt(CCTVtextField_9.getText()));
+				kelas.s.setKonCCTV(Integer.parseInt(CCTVtextField_10.getText()));
+				//belum posisi cctv
+				if(cctvrdbtnDepanBelakang.isSelected()){
+					kelas.s.setPosCCTV(cctvrdbtnDepanBelakang.getText());
+				}else if(cctvrdbtnTempatLain_4.isSelected()){
+					kelas.s.setPosCCTV(cctvrdbtnTempatLain_4.getText());
+				}
+				//================================================================================
+				if(lantairdbtnBersih.isSelected()){
+					kelas.b.setKonLantai(lantairdbtnBersih.getText());
+				}else if(lantairdbtnKotor.isSelected()){
+					kelas.b.setKonLantai(lantairdbtnKotor.getText());
+				}
+				
+				if(dindingradioButton.isSelected()){
+					kelas.b.setKonDinding(dindingradioButton.getText());
+				}else if (dindingradioButton_1.isSelected()){
+					kelas.b.setKonDinding(dindingradioButton_1.getText());
+				}
+				
+				if(atapradioButton_2.isSelected()){
+					kelas.b.setKonAtap(atapradioButton_2.getText());
+				}else if (atapradioButton_3.isSelected()){
+					kelas.b.setKonAtap(atapradioButton_3.getText());
+				}
+				
+				if(pinturadioButton_4.isSelected()){
+					kelas.b.setKonPintu(pinturadioButton_4.getText());
+				}else if(pinturadioButton_5.isSelected()){
+					kelas.b.setKonPintu(pinturadioButton_5.getText());
+				}
+				
+				if(jendelaradioButton_6.isSelected()){
+					kelas.b.setKonJendela(jendelaradioButton_6.getText());
+				}else if(jendelaradioButton_7.isSelected()){
+					kelas.b.setKonJendela(jendelaradioButton_7.getText());
+				}
+				//===================================================================
+				if(udararadio1.isSelected()){
+					kelas.l.setSirkulasiUdara(udararadio1.getText());
+				}else if(udararadio2.isSelected()){
+					kelas.l.setSirkulasiUdara(udararadio2.getText());
+				}
+				
+				kelas.l.setPencahayaan(Integer.parseInt(pencahayaantextField.getText()));
+				kelas.l.setKelembapan(Double.parseDouble(KelembapantextField_1.getText()));
+				kelas.l.setSuhu(Double.parseDouble(suhutextField_2.getText()));
+				//===========================================================================
+				kelas.k.setKebisingan(kebisingancomboBox_5.getSelectedItem().toString());
+				kelas.k.setBau(baucomboBox_6.getSelectedItem().toString());
+				kelas.k.setKebocoran(kebocorancomboBox_7.getSelectedItem().toString());
+				kelas.k.setKerusakan(kerusakancomboBox_8.getSelectedItem().toString());
+				kelas.k.setKeausan(keausancomboBox_9.getSelectedItem().toString());
+				//=============================================================================
+				kelas.a.setKekokohan(kekokohancomboBox_10.getSelectedItem().toString());
+				kelas.a.setKonPintu(pintucomboBox_11.getSelectedItem().toString());
+				kelas.a.setKonJendela(jendelacomboBox_12.getSelectedItem().toString());
+				kelas.a.setBahaya(bahayacomboBox_13.getSelectedItem().toString());
+				//============================================================================
+				
+				
+				
+				
+			}
+		});
+	}
+}
