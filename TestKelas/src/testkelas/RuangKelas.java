@@ -1,4 +1,3 @@
-package testkelas;
 
 import java.io.Serializable;
 
@@ -17,42 +16,42 @@ abstract public class RuangKelas implements Serializable{
     private int jmJendela;
     private int jmStopKontak;
     private int konStopKontak;
-    private int posStopKontak;
+    private String posStopKontak;
     private int jmKabelLCD;
-    private int konKabelLCD;
-    private int PosKabelLCD;
+    private String konKabelLCD;
+    private String PosKabelLCD;
     private int jmLampu;
     private int konLampu;
-    private int posLampu;
+    private String posLampu;
     private int jmKipas;
     private int konKipas;
-    private int posKipas;
+    private String posKipas;
     private int jmAC;
-    private int konAC;
-    private int posAC;
+    private String konAC;
+    private String posAC;
     private int SSID;
     private int banwidth;
     private int jmCCTV;
     private int konCCTV;
-    private int posCCTV;
-    private int konLantai;
-    private int konDinding;
-    private int konAtap;
-    private int konPintu;
-    private int konJendela;
-    private int sirkulasiUdara;
+    private String posCCTV;
+    private String konLantai;
+    private String konDinding;
+    private String konAtap;
+    private String konPintu;
+    private String konJendela;
+    private String sirkulasiUdara;
     private double pencahayaan;
     private double kelembapan;
     private double suhu;
-    private int kebisingan;
-    private int bau;
-    private int kebocoran;
-    private int kerusakan;
-    private int keausan;
-    private int kekokohan;
-    private int kunciPintu;
-    private int kunciJendela;
-    private int bahaya;
+    private String kebisingan;
+    private String bau;
+    private String kebocoran;
+    private String kerusakan;
+    private String keausan;
+    private String kekokohan;
+    private String kunciPintu;
+    private String kunciJendela;
+    private String bahaya;
     
     public RuangKelas(String nama,String lokasi, String studi){
         this.nama=nama;
@@ -162,22 +161,22 @@ abstract public class RuangKelas implements Serializable{
     }
 
 
-    public int getKonKabelLCD() {
+    public String getKonKabelLCD() {
         return konKabelLCD;
     }
 
 
-    public void setKonKabelLCD(int konKabelLCD) {
+    public void setKonKabelLCD(String konKabelLCD) {
         this.konKabelLCD = konKabelLCD;
     }
 
 
-    public int getPosKabelLCD() {
+    public String getPosKabelLCD() {
         return PosKabelLCD;
     }
 
 
-    public void setPosKabelLCD(int PosKabelLCD) {
+    public void setPosKabelLCD(String PosKabelLCD) {
         this.PosKabelLCD = PosKabelLCD;
     }
 
@@ -201,12 +200,12 @@ abstract public class RuangKelas implements Serializable{
     }
 
 
-    public int getPosLampu() {
+    public String getPosLampu() {
         return posLampu;
     }
 
 
-    public void setPosLampu(int posLampu) {
+    public void setPosLampu(String posLampu) {
         this.posLampu = posLampu;
     }
 
@@ -231,12 +230,12 @@ abstract public class RuangKelas implements Serializable{
     }
 
 
-    public int getPosKipas() {
+    public String getPosKipas() {
         return posKipas;
     }
 
 
-    public void setPosKipas(int posKipas) {
+    public void setPosKipas(String posKipas) {
         this.posKipas = posKipas;
     }
 
@@ -251,22 +250,22 @@ abstract public class RuangKelas implements Serializable{
     }
 
 
-    public int getKonAC() {
+    public String getKonAC() {
         return konAC;
     }
 
 
-    public void setKonAC(int konAC) {
+    public void setKonAC(String konAC) {
         this.konAC = konAC;
     }
 
 
-    public int getPosAC() {
+    public String getPosAC() {
         return posAC;
     }
 
 
-    public void setPosAC(int posAC) {
+    public void setPosAC(String posAC) {
         this.posAC = posAC;
     }
 
@@ -323,98 +322,98 @@ abstract public class RuangKelas implements Serializable{
     /**
      * @return the posCCTV
      */
-    public int getPosCCTV() {
+    public String getPosCCTV() {
         return posCCTV;
     }
 
     /**
      * @param posCCTV the posCCTV to set
      */
-    public void setPosCCTV(int posCCTV) {
+    public void setPosCCTV(String posCCTV) {
         this.posCCTV = posCCTV;
     }
 
     /**
      * @return the konLantai
      */
-    public int getKonLantai() {
+    public String getKonLantai() {
         return konLantai;
     }
 
     /**
      * @param konLantai the konLantai to set
      */
-    public void setKonLantai(int konLantai) {
+    public void setKonLantai(String konLantai) {
         this.konLantai = konLantai;
     }
 
     /**
      * @return the konDinding
      */
-    public int getKonDinding() {
+    public String getKonDinding() {
         return konDinding;
     }
 
     /**
      * @param konDinding the konDinding to set
      */
-    public void setKonDinding(int konDinding) {
+    public void setKonDinding(String konDinding) {
         this.konDinding = konDinding;
     }
 
     /**
      * @return the konAtap
      */
-    public int getKonAtap() {
+    public String getKonAtap() {
         return konAtap;
     }
 
     /**
      * @param konAtap the konAtap to set
      */
-    public void setKonAtap(int konAtap) {
+    public void setKonAtap(String konAtap) {
         this.konAtap = konAtap;
     }
 
     /**
      * @return the konPintu
      */
-    public int getKonPintu() {
+    public String getKonPintu() {
         return konPintu;
     }
 
     /**
      * @param konPintu the konPintu to set
      */
-    public void setKonPintu(int konPintu) {
+    public void setKonPintu(String konPintu) {
         this.konPintu = konPintu;
     }
 
     /**
      * @return the konJendela
      */
-    public int getKonJendela() {
+    public String getKonJendela() {
         return konJendela;
     }
 
     /**
      * @param konJendela the konJendela to set
      */
-    public void setKonJendela(int konJendela) {
+    public void setKonJendela(String konJendela) {
         this.konJendela = konJendela;
     }
 
     /**
      * @return the sirkulasiUdara
      */
-    public int getSirkulasiUdara() {
+    public String getSirkulasiUdara() {
         return sirkulasiUdara;
     }
 
     /**
      * @param sirkulasiUdara the sirkulasiUdara to set
      */
-    public void setSirkulasiUdara(int sirkulasiUdara) {
+    public void setSirkulasiUdara(String sirkulasiUdara) {
         this.sirkulasiUdara = sirkulasiUdara;
     }
 
@@ -463,126 +462,126 @@ abstract public class RuangKelas implements Serializable{
     /**
      * @return the kebisingan
      */
-    public int getKebisingan() {
+    public String getKebisingan() {
         return kebisingan;
     }
 
     /**
      * @param kebisingan the kebisingan to set
      */
-    public void setKebisingan(int kebisingan) {
+    public void setKebisingan(String kebisingan) {
         this.kebisingan = kebisingan;
     }
 
     /**
      * @return the bau
      */
-    public int getBau() {
+    public String getBau() {
         return bau;
     }
 
     /**
      * @param bau the bau to set
      */
-    public void setBau(int bau) {
+    public void setBau(String bau) {
         this.bau = bau;
     }
 
     /**
      * @return the kebocoran
      */
-    public int getKebocoran() {
+    public String getKebocoran() {
         return kebocoran;
     }
 
     /**
      * @param kebocoran the kebocoran to set
      */
-    public void setKebocoran(int kebocoran) {
+    public void setKebocoran(String kebocoran) {
         this.kebocoran = kebocoran;
     }
 
     /**
      * @return the kerusakan
      */
-    public int getKerusakan() {
+    public String getKerusakan() {
         return kerusakan;
     }
 
     /**
      * @param kerusakan the kerusakan to set
      */
-    public void setKerusakan(int kerusakan) {
+    public void setKerusakan(String kerusakan) {
         this.kerusakan = kerusakan;
     }
 
     /**
      * @return the keausan
      */
-    public int getKeausan() {
+    public String getKeausan() {
         return keausan;
     }
 
     /**
      * @param keausan the keausan to set
      */
-    public void setKeausan(int keausan) {
+    public void setKeausan(String keausan) {
         this.keausan = keausan;
     }
 
     /**
      * @return the kekokohan
      */
-    public int getKekokohan() {
+    public String getKekokohan() {
         return kekokohan;
     }
 
     /**
      * @param kekokohan the kekokohan to set
      */
-    public void setKekokohan(int kekokohan) {
+    public void setKekokohan(String kekokohan) {
         this.kekokohan = kekokohan;
     }
 
     /**
      * @return the kunciPintu
      */
-    public int getKunciPintu() {
+    public String getKunciPintu() {
         return kunciPintu;
     }
 
     /**
      * @param kunciPintu the kunciPintu to set
      */
-    public void setKunciPintu(int kunciPintu) {
+    public void setKunciPintu(String kunciPintu) {
         this.kunciPintu = kunciPintu;
     }
 
     /**
      * @return the kunciJendela
      */
-    public int getKunciJendela() {
+    public String getKunciJendela() {
         return kunciJendela;
     }
 
     /**
      * @param kunciJendela the kunciJendela to set
      */
-    public void setKunciJendela(int kunciJendela) {
+    public void setKunciJendela(String kunciJendela) {
         this.kunciJendela = kunciJendela;
     }
 
     /**
      * @return the bahaya
      */
-    public int getBahaya() {
+    public String getBahaya() {
         return bahaya;
     }
 
     /**
      * @param bahaya the bahaya to set
      */
-    public void setBahaya(int bahaya) {
+    public void setBahaya(String bahaya) {
         this.bahaya = bahaya;
     }
 
@@ -603,14 +602,14 @@ abstract public class RuangKelas implements Serializable{
     /**
      * @return the posStopKontak
      */
-    public int getPosStopKontak() {
+    public String getPosStopKontak() {
         return posStopKontak;
     }
 
     /**
      * @param posStopKontak the posStopKontak to set
      */
-    public void setPosStopKontak(int posStopKontak) {
+    public void setPosStopKontak(String posStopKontak) {
         this.posStopKontak = posStopKontak;
     }
 
