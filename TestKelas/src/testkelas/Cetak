@@ -1,0 +1,641 @@
+import javax.swing.JPanel;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Font;
+
+import javax.swing.JButton;
+
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+
+public class Cetak extends JPanel {
+	private JTextField namtextField;
+	private JTextField lokasitextField_1;
+	private JTextField programtextField_2;
+	private JTextField panjangtextField_3;
+	private JTextField lebartextField_4;
+	private JTextField kursitextField_5;
+	private JTextField pintutextField_6;
+	private JTextField jendelatextField_7;
+	private JTextField luastextField_8;
+	private JTextField bentuktextField_9;
+	private JTextField stekertextField_10;
+	private JTextField stekertextField_11;
+	private JTextField stekertextField_12;
+	private JTextField lcdtextField_13;
+	private JTextField lcdtextField_14;
+	private JTextField lcdtextField_15;
+	private JTextField lamputextField_16;
+	private JTextField lamputextField_17;
+	private JTextField lamputextField_18;
+	private JTextField kipastextField_19;
+	private JTextField kipastextField_20;
+	private JTextField kipastextField_21;
+	private JTextField actextField_22;
+	private JTextField actextField_23;
+	private JTextField actextField_24;
+	private JTextField ssidtextField_25;
+	private JTextField bandwidthtextField_26;
+	private JTextField cctvtextField_27;
+	private JTextField cctvtextField_28;
+	private JTextField cctvtextField_29;
+	private JTextField lantaitextField_30;
+	private JTextField dindingtextField_31;
+	private JTextField ataptextField_32;
+	private JTextField pintutextField_33;
+	private JTextField jendelatextField_34;
+	private JTextField udaratextField_35;
+	private JTextField pencahayaantextField_36;
+	private JTextField kelembapantextField_37;
+	private JTextField suhutextField_38;
+	private JTextField kebisingantextField_39;
+	private JTextField bautextField_40;
+	private JTextField kebocorantextField_41;
+	private JTextField kerusakantextField_42;
+	private JTextField keausantextField_43;
+	private JTextField kekokohantextField_44;
+	private JTextField pintutextField_45;
+	private JTextField jendelatextField_46;
+	private JTextField bahayatextField_47;
+	
+	Pilihan pilih=new Pilihan();
+
+	/**
+	 * Create the panel.
+	 */
+	
+	
+	public Cetak(KelasTest kelas) {
+		
+		setBackground(Color.BLACK);
+		setLayout(null);
+		
+		JLabel lblAnalisisData = new JLabel("Analisis Data");
+		lblAnalisisData.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblAnalisisData.setBounds(107, 14, 117, 14);
+		add(lblAnalisisData);
+		
+		namtextField = new JTextField(kelas.c.getNama());
+		namtextField.setBackground(Color.WHITE);
+		namtextField.setForeground(Color.BLACK);
+		namtextField.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		namtextField.setBounds(148, 36, 86, 20);
+		add(namtextField);
+		namtextField.setColumns(10);
+		
+		JLabel lblNama = new JLabel("Nama:");
+		lblNama.setForeground(Color.WHITE);
+		lblNama.setBounds(49, 39, 46, 14);
+		add(lblNama);
+		
+		JLabel lblNewLabel = new JLabel("lokasi: ");
+		lblNewLabel.setForeground(Color.WHITE);
+		lblNewLabel.setBounds(49, 64, 70, 14);
+		add(lblNewLabel);
+		
+		JLabel lblProgramStudi = new JLabel("program studi:");
+		lblProgramStudi.setForeground(Color.WHITE);
+		lblProgramStudi.setBounds(49, 89, 86, 14);
+		add(lblProgramStudi);
+		
+		lokasitextField_1 = new JTextField(kelas.c.getLokasi());
+		lokasitextField_1.setBounds(148, 61, 86, 20);
+		add(lokasitextField_1);
+		lokasitextField_1.setColumns(10);
+		
+		
+		programtextField_2 = new JTextField(kelas.c.getStudi());
+		programtextField_2.setBounds(148, 86, 86, 20);
+		add(programtextField_2);
+		programtextField_2.setColumns(10);
+		
+		JLabel lblPanjangKalas = new JLabel("panjang kalas:");
+		lblPanjangKalas.setForeground(Color.WHITE);
+		lblPanjangKalas.setBounds(49, 114, 86, 14);
+		add(lblPanjangKalas);
+		
+		panjangtextField_3 = new JTextField(""+kelas.c.getPanjang());
+		panjangtextField_3.setBounds(148, 111, 46, 20);
+		add(panjangtextField_3);
+		panjangtextField_3.setColumns(10);
+		
+		JLabel lblLebarKelas = new JLabel("Lebar kelas:");
+		lblLebarKelas.setForeground(Color.WHITE);
+		lblLebarKelas.setBounds(49, 139, 86, 14);
+		add(lblLebarKelas);
+		
+		lebartextField_4 = new JTextField(""+kelas.c.getLebar());
+		lebartextField_4.setBounds(148, 136, 46, 20);
+		add(lebartextField_4);
+		lebartextField_4.setColumns(10);
+		
+		JLabel lblJumlahKursi = new JLabel("Jumlah kursi:");
+		lblJumlahKursi.setForeground(Color.WHITE);
+		lblJumlahKursi.setBounds(49, 164, 94, 14);
+		add(lblJumlahKursi);
+		
+		JLabel lblJumlahPintu = new JLabel("Jumlah pintu:");
+		lblJumlahPintu.setForeground(Color.WHITE);
+		lblJumlahPintu.setBounds(49, 189, 94, 14);
+		add(lblJumlahPintu);
+		
+		JLabel lblJumlahJendela = new JLabel("Jumlah jendela:");
+		lblJumlahJendela.setForeground(Color.WHITE);
+		lblJumlahJendela.setBounds(49, 214, 94, 14);
+		add(lblJumlahJendela);
+		
+		kursitextField_5 = new JTextField(""+kelas.c.getJmKursi());
+		kursitextField_5.setBounds(148, 161, 46, 20);
+		add(kursitextField_5);
+		kursitextField_5.setColumns(10);
+		
+		pintutextField_6 = new JTextField(""+kelas.c.getJmPintu());
+		pintutextField_6.setBounds(148, 186, 46, 20);
+		add(pintutextField_6);
+		pintutextField_6.setColumns(10);
+		
+		jendelatextField_7 = new JTextField(""+kelas.c.getJmJendela());
+		jendelatextField_7.setBounds(148, 211, 46, 20);
+		add(jendelatextField_7);
+		jendelatextField_7.setColumns(10);
+		
+		JLabel lblLuas = new JLabel("Luas:");
+		lblLuas.setForeground(Color.WHITE);
+		lblLuas.setBounds(49, 239, 70, 14);
+		add(lblLuas);
+		
+		JLabel lblBentukRuang = new JLabel("Bentuk ruang:");
+		lblBentukRuang.setForeground(Color.WHITE);
+		lblBentukRuang.setBounds(49, 264, 94, 14);
+		add(lblBentukRuang);
+		
+		luastextField_8 = new JTextField();
+		luastextField_8.setBounds(148, 236, 46, 20);
+		add(luastextField_8);
+		luastextField_8.setColumns(10);
+		
+		bentuktextField_9 = new JTextField();
+		bentuktextField_9.setBounds(148, 261, 86, 20);
+		add(bentuktextField_9);
+		bentuktextField_9.setColumns(10);
+		
+		JLabel lblAnalisisSarana = new JLabel("Analisis Sarana");
+		lblAnalisisSarana.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblAnalisisSarana.setBounds(107, 304, 117, 14);
+		add(lblAnalisisSarana);
+		
+		JLabel lblJumlahSteker = new JLabel("Jumlah steker:");
+		lblJumlahSteker.setBounds(49, 324, 94, 14);
+		add(lblJumlahSteker);
+		
+		stekertextField_10 = new JTextField(""+kelas.s.getJmStopKontak());
+		stekertextField_10.setBounds(148, 321, 46, 20);
+		add(stekertextField_10);
+		stekertextField_10.setColumns(10);
+		
+		JLabel lblKondisiDinding = new JLabel("Kondisi dinding:");
+		lblKondisiDinding.setBounds(592, 25, 104, 14);
+		add(lblKondisiDinding);
+		
+		JLabel lblOndisiAtap = new JLabel("Kondisi atap:");
+		lblOndisiAtap.setBounds(592, 50, 104, 14);
+		add(lblOndisiAtap);
+		
+		dindingtextField_31 = new JTextField(kelas.b.getKonDinding());
+		dindingtextField_31.setBounds(704, 22, 86, 20);
+		add(dindingtextField_31);
+		dindingtextField_31.setColumns(10);
+		
+		ataptextField_32 = new JTextField(kelas.b.getKonAtap());
+		ataptextField_32.setBounds(704, 47, 86, 20);
+		add(ataptextField_32);
+		ataptextField_32.setColumns(10);
+		
+		JPanel panel = new JPanel();
+		panel.setBackground(new Color(255, 51, 0));
+		panel.setBounds(10, 11, 247, 279);
+		add(panel);
+		panel.setLayout(null);
+		
+		JPanel panel_1 = new JPanel();
+		panel_1.setBackground(Color.CYAN);
+		panel_1.setBounds(10, 300, 247, 180);
+		add(panel_1);
+		panel_1.setLayout(null);
+		
+		JLabel lblJumlahStekerDalam = new JLabel("jumlah steker dalam ondisi baik:");
+		lblJumlahStekerDalam.setBounds(39, 42, 185, 14);
+		panel_1.add(lblJumlahStekerDalam);
+		
+		stekertextField_11 = new JTextField(""+kelas.s.getKonStopKontak());
+		stekertextField_11.setBounds(138, 59, 46, 20);
+		panel_1.add(stekertextField_11);
+		stekertextField_11.setColumns(10);
+		
+		JLabel lblNewLabel_1 = new JLabel("Posisi Steker:");
+		lblNewLabel_1.setBounds(39, 85, 94, 14);
+		panel_1.add(lblNewLabel_1);
+		
+		stekertextField_12 = new JTextField(kelas.s.getPosStopKontak());
+		stekertextField_12.setBounds(138, 82, 86, 20);
+		panel_1.add(stekertextField_12);
+		stekertextField_12.setColumns(10);
+		
+		JLabel lblJumlahKabelLcd = new JLabel("Jumlah kabel LCD:");
+		lblJumlahKabelLcd.setBounds(39, 107, 111, 14);
+		panel_1.add(lblJumlahKabelLcd);
+		
+		lcdtextField_13 = new JTextField(""+kelas.s.getJmKabelLCD());
+		lcdtextField_13.setBounds(138, 104, 46, 20);
+		panel_1.add(lcdtextField_13);
+		lcdtextField_13.setColumns(10);
+		
+		JLabel lblNewLabel_2 = new JLabel("Kondisi kabel LCD:");
+		lblNewLabel_2.setBounds(39, 128, 111, 14);
+		panel_1.add(lblNewLabel_2);
+		
+		lcdtextField_14 = new JTextField(""+kelas.s.getKonKabelLCD());
+		lcdtextField_14.setBounds(138, 125, 86, 20);
+		panel_1.add(lcdtextField_14);
+		lcdtextField_14.setColumns(10);
+		
+		JPanel panel_2 = new JPanel();
+		panel_2.setBackground(Color.CYAN);
+		panel_2.setBounds(267, 11, 278, 377);
+		add(panel_2);
+		panel_2.setLayout(null);
+		
+		JLabel lblPosisiKabelLcd = new JLabel("Posisi Kabel LCD:");
+		lblPosisiKabelLcd.setBounds(25, 6, 111, 14);
+		panel_2.add(lblPosisiKabelLcd);
+		
+		lcdtextField_15 = new JTextField(kelas.s.getPosKabelLCD());
+		lcdtextField_15.setBounds(137, 4, 86, 20);
+		panel_2.add(lcdtextField_15);
+		lcdtextField_15.setColumns(10);
+		
+		JLabel lblJumlahLampu = new JLabel("Jumlah lampu:");
+		lblJumlahLampu.setBounds(25, 32, 104, 14);
+		panel_2.add(lblJumlahLampu);
+		
+		JLabel lblLampuKondisiBaik = new JLabel("Lampu kondisi baik:");
+		lblLampuKondisiBaik.setBounds(25, 57, 113, 14);
+		panel_2.add(lblLampuKondisiBaik);
+		
+		JLabel lblPosisiLampu = new JLabel("Posisi Lampu: ");
+		lblPosisiLampu.setBounds(25, 82, 111, 14);
+		panel_2.add(lblPosisiLampu);
+		
+		lamputextField_16 = new JTextField(""+kelas.s.getJmLampu());
+		lamputextField_16.setBounds(137, 29, 46, 20);
+		panel_2.add(lamputextField_16);
+		lamputextField_16.setColumns(10);
+		
+		lamputextField_17 = new JTextField(""+kelas.c.getKonLampu());
+		lamputextField_17.setBounds(137, 54, 46, 20);
+		panel_2.add(lamputextField_17);
+		lamputextField_17.setColumns(10);
+		
+		lamputextField_18 = new JTextField(kelas.s.getPosLampu());
+		lamputextField_18.setBounds(137, 79, 86, 20);
+		panel_2.add(lamputextField_18);
+		lamputextField_18.setColumns(10);
+		
+		JLabel lblJumlahKipasAngin = new JLabel("Jumlah kipas angin:");
+		lblJumlahKipasAngin.setBounds(25, 107, 111, 14);
+		panel_2.add(lblJumlahKipasAngin);
+		
+		JLabel lblKipasKondisiBaik = new JLabel("Kipas kondisi baik:");
+		lblKipasKondisiBaik.setBounds(25, 132, 111, 14);
+		panel_2.add(lblKipasKondisiBaik);
+		
+		JLabel lblPosisiKipas = new JLabel("Posisi kipas:");
+		lblPosisiKipas.setBounds(25, 157, 111, 14);
+		panel_2.add(lblPosisiKipas);
+		
+		kipastextField_19 = new JTextField(""+kelas.s.getJmKipas());
+		kipastextField_19.setBounds(137, 104, 46, 20);
+		panel_2.add(kipastextField_19);
+		kipastextField_19.setColumns(10);
+		
+		kipastextField_20 = new JTextField(""+kelas.s.getKonKipas());
+		kipastextField_20.setBounds(137, 129, 46, 20);
+		panel_2.add(kipastextField_20);
+		kipastextField_20.setColumns(10);
+		
+		kipastextField_21 = new JTextField(kelas.s.getPosKipas());
+		kipastextField_21.setBounds(137, 154, 86, 20);
+		panel_2.add(kipastextField_21);
+		kipastextField_21.setColumns(10);
+		
+		JLabel lblJumlahAc = new JLabel("Jumlah AC:");
+		lblJumlahAc.setBounds(25, 182, 111, 14);
+		panel_2.add(lblJumlahAc);
+		
+		JLabel lblKondisiAc = new JLabel("Kondisi AC:");
+		lblKondisiAc.setBounds(25, 207, 111, 14);
+		panel_2.add(lblKondisiAc);
+		
+		JLabel lblPosisiAc = new JLabel("Posisi AC:");
+		lblPosisiAc.setBounds(25, 232, 111, 14);
+		panel_2.add(lblPosisiAc);
+		
+		actextField_22 = new JTextField(""+kelas.s.getJmAC());
+		actextField_22.setBounds(137, 179, 46, 20);
+		panel_2.add(actextField_22);
+		actextField_22.setColumns(10);
+		
+		actextField_23 = new JTextField(kelas.s.getKonAC());
+		actextField_23.setBounds(137, 204, 86, 20);
+		panel_2.add(actextField_23);
+		actextField_23.setColumns(10);
+		
+		actextField_24 = new JTextField(kelas.s.getPosAC());
+		actextField_24.setBounds(137, 229, 86, 20);
+		panel_2.add(actextField_24);
+		actextField_24.setColumns(10);
+		
+		JLabel lblSsid = new JLabel("SSID:");
+		lblSsid.setBounds(25, 257, 94, 14);
+		panel_2.add(lblSsid);
+		
+		JLabel lblBandwidth = new JLabel("Bandwidth:");
+		lblBandwidth.setBounds(25, 282, 104, 14);
+		panel_2.add(lblBandwidth);
+		
+		ssidtextField_25 = new JTextField(kelas.s.getSSID());
+		ssidtextField_25.setBounds(137, 254, 86, 20);
+		panel_2.add(ssidtextField_25);
+		ssidtextField_25.setColumns(10);
+		
+		bandwidthtextField_26 = new JTextField(kelas.s.getBanwidth());
+		bandwidthtextField_26.setBounds(137, 279, 86, 20);
+		panel_2.add(bandwidthtextField_26);
+		bandwidthtextField_26.setColumns(10);
+		
+		JLabel lblJumlahCctv = new JLabel("Jumlah CCTV:");
+		lblJumlahCctv.setBounds(25, 303, 104, 14);
+		panel_2.add(lblJumlahCctv);
+		
+		JLabel lblCctvKondisiBaik = new JLabel("CCTV kondisi baik:");
+		lblCctvKondisiBaik.setBounds(25, 328, 104, 14);
+		panel_2.add(lblCctvKondisiBaik);
+		
+		JLabel lblPosisiCctv = new JLabel("Posisi CCTV:");
+		lblPosisiCctv.setBounds(25, 350, 94, 14);
+		panel_2.add(lblPosisiCctv);
+		
+		cctvtextField_27 = new JTextField(""+kelas.s.getJmCCTV());
+		cctvtextField_27.setBounds(137, 303, 46, 20);
+		panel_2.add(cctvtextField_27);
+		cctvtextField_27.setColumns(10);
+		
+		cctvtextField_28 = new JTextField(""+kelas.s.getKonCCTV());
+		cctvtextField_28.setBounds(137, 325, 46, 20);
+		panel_2.add(cctvtextField_28);
+		cctvtextField_28.setColumns(10);
+		
+		cctvtextField_29 = new JTextField(kelas.s.getPosCCTV());
+		cctvtextField_29.setBounds(137, 347, 86, 20);
+		panel_2.add(cctvtextField_29);
+		cctvtextField_29.setColumns(10);
+		
+		JPanel panel_3 = new JPanel();
+		panel_3.setBackground(Color.GREEN);
+		panel_3.setBounds(267, 399, 278, 81);
+		add(panel_3);
+		panel_3.setLayout(null);
+		
+		JLabel lblKondisi = new JLabel("Kondisi lantai:");
+		lblKondisi.setBounds(24, 25, 104, 14);
+		panel_3.add(lblKondisi);
+		
+		lantaitextField_30 = new JTextField(kelas.b.getKonLantai());
+		lantaitextField_30.setBounds(136, 22, 86, 20);
+		panel_3.add(lantaitextField_30);
+		lantaitextField_30.setColumns(10);
+		
+		JLabel lblAnalisisKebersihan = new JLabel("Analisis Kebersihan");
+		lblAnalisisKebersihan.setBounds(75, 4, 147, 14);
+		panel_3.add(lblAnalisisKebersihan);
+		lblAnalisisKebersihan.setFont(new Font("Tahoma", Font.BOLD, 11));
+		
+		JLabel lblNewLabel_3 = new JLabel("Kondisi Pintu:");
+		lblNewLabel_3.setBounds(592, 75, 105, 14);
+		add(lblNewLabel_3);
+		
+		JLabel lblKondisiJendela = new JLabel("Kondisi Jendela:");
+		lblKondisiJendela.setBounds(592, 98, 104, 14);
+		add(lblKondisiJendela);
+		
+		pintutextField_33 = new JTextField(kelas.b.getKonPintu());
+		pintutextField_33.setBounds(704, 72, 86, 20);
+		add(pintutextField_33);
+		pintutextField_33.setColumns(10);
+		
+		jendelatextField_34 = new JTextField(kelas.b.getKonJendela());
+		jendelatextField_34.setBounds(704, 96, 86, 20);
+		add(jendelatextField_34);
+		jendelatextField_34.setColumns(10);
+		
+		JPanel panel_4 = new JPanel();
+		panel_4.setBackground(Color.GREEN);
+		panel_4.setBounds(555, 11, 278, 117);
+		add(panel_4);
+		panel_4.setLayout(null);
+		
+		JLabel lblNewLabel_4 = new JLabel("Analisis Lingkunngan");
+		lblNewLabel_4.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblNewLabel_4.setBounds(654, 150, 136, 14);
+		add(lblNewLabel_4);
+		
+		JPanel panel_5 = new JPanel();
+		panel_5.setBackground(Color.YELLOW);
+		panel_5.setBounds(555, 139, 278, 133);
+		add(panel_5);
+		panel_5.setLayout(null);
+		
+		JLabel lblNewLabel_5 = new JLabel("Sirkulasi udara:");
+		lblNewLabel_5.setBounds(37, 30, 104, 14);
+		panel_5.add(lblNewLabel_5);
+		
+		JLabel lblPencahayaan = new JLabel("Pencahayaan:");
+		lblPencahayaan.setBounds(38, 54, 103, 14);
+		panel_5.add(lblPencahayaan);
+		
+		JLabel lblKelembapan = new JLabel("Kelembapan:");
+		lblKelembapan.setBounds(37, 77, 94, 14);
+		panel_5.add(lblKelembapan);
+		
+		JLabel lblSuku = new JLabel("Suhu:");
+		lblSuku.setBounds(37, 102, 46, 14);
+		panel_5.add(lblSuku);
+		
+		udaratextField_35 = new JTextField(kelas.l.getSirkulasiUdara());
+		udaratextField_35.setBounds(149, 27, 86, 20);
+		panel_5.add(udaratextField_35);
+		udaratextField_35.setColumns(10);
+		
+		pencahayaantextField_36 = new JTextField(""+kelas.l.getPencahayaan());
+		pencahayaantextField_36.setBounds(149, 52, 46, 20);
+		panel_5.add(pencahayaantextField_36);
+		pencahayaantextField_36.setColumns(10);
+		
+		kelembapantextField_37 = new JTextField(""+kelas.l.getKelembapan());
+		kelembapantextField_37.setBounds(149, 77, 46, 20);
+		panel_5.add(kelembapantextField_37);
+		kelembapantextField_37.setColumns(10);
+		
+		suhutextField_38 = new JTextField(""+kelas.l.getSuhu());
+		suhutextField_38.setBounds(149, 102, 46, 20);
+		panel_5.add(suhutextField_38);
+		suhutextField_38.setColumns(10);
+		
+		JLabel lblAnalisis = new JLabel("Analisis kenyamanan");
+		lblAnalisis.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblAnalisis.setBounds(654, 300, 136, 14);
+		add(lblAnalisis);
+		
+		JLabel lblNewLabel_6 = new JLabel("Kebisingan:");
+		lblNewLabel_6.setBounds(592, 327, 101, 14);
+		add(lblNewLabel_6);
+		
+		JLabel lblBau = new JLabel("Bau:");
+		lblBau.setBounds(592, 349, 46, 14);
+		add(lblBau);
+		
+		JLabel lblKebocoran = new JLabel("Kebocoran:");
+		lblKebocoran.setBounds(592, 374, 103, 14);
+		add(lblKebocoran);
+		
+		JLabel lblKerusakan = new JLabel("Kerusakan:");
+		lblKerusakan.setBounds(592, 398, 101, 14);
+		add(lblKerusakan);
+		
+		JLabel lblKeausan = new JLabel("Keausan:");
+		lblKeausan.setBounds(592, 423, 107, 14);
+		add(lblKeausan);
+		
+		kebisingantextField_39 = new JTextField(kelas.k.getKebisingan());
+		kebisingantextField_39.setBounds(706, 325, 86, 20);
+		add(kebisingantextField_39);
+		kebisingantextField_39.setColumns(10);
+		
+		bautextField_40 = new JTextField(kelas.k.getBau());
+		bautextField_40.setBounds(706, 347, 86, 20);
+		add(bautextField_40);
+		bautextField_40.setColumns(10);
+		
+		kebocorantextField_41 = new JTextField(kelas.k.getKebocoran());
+		kebocorantextField_41.setBounds(706, 371, 86, 20);
+		add(kebocorantextField_41);
+		kebocorantextField_41.setColumns(10);
+		
+		kerusakantextField_42 = new JTextField(kelas.k.getKerusakan());
+		kerusakantextField_42.setBounds(706, 394, 86, 20);
+		add(kerusakantextField_42);
+		kerusakantextField_42.setColumns(10);
+		
+		keausantextField_43 = new JTextField(kelas.k.getKeausan());
+		keausantextField_43.setBounds(706, 419, 86, 20);
+		add(keausantextField_43);
+		keausantextField_43.setColumns(10);
+		
+		JPanel panel_6 = new JPanel();
+		panel_6.setBackground(Color.PINK);
+		panel_6.setBounds(555, 280, 278, 200);
+		add(panel_6);
+		panel_6.setLayout(null);
+		
+		JLabel lblNewLabel_7 = new JLabel("Analisis Keamanan");
+		lblNewLabel_7.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblNewLabel_7.setBounds(935, 25, 101, 14);
+		add(lblNewLabel_7);
+		
+		JLabel lblNewLabel_8 = new JLabel("Kekokohan:");
+		lblNewLabel_8.setBounds(873, 49, 86, 14);
+		add(lblNewLabel_8);
+		
+		JLabel lblKunciPintu = new JLabel("Kunci Pintu:");
+		lblKunciPintu.setBounds(873, 74, 104, 14);
+		add(lblKunciPintu);
+		
+		JLabel lblKunciJendela = new JLabel("Kunci Jendela:");
+		lblKunciJendela.setBounds(873, 99, 86, 14);
+		add(lblKunciJendela);
+		
+		JLabel lblBahaya = new JLabel("Bahaya:");
+		lblBahaya.setBounds(873, 121, 86, 14);
+		add(lblBahaya);
+		
+		kekokohantextField_44 = new JTextField(kelas.a.getKekokohan());
+		kekokohantextField_44.setBounds(969, 46, 86, 20);
+		add(kekokohantextField_44);
+		kekokohantextField_44.setColumns(10);
+		
+		pintutextField_45 = new JTextField(kelas.k.getKonPintu());
+		pintutextField_45.setBounds(969, 71, 86, 20);
+		add(pintutextField_45);
+		pintutextField_45.setColumns(10);
+		
+		jendelatextField_46 = new JTextField(kelas.a.getKonJendela());
+		jendelatextField_46.setBounds(969, 96, 86, 20);
+		add(jendelatextField_46);
+		jendelatextField_46.setColumns(10);
+		
+		bahayatextField_47 = new JTextField(kelas.a.getBahaya());
+		bahayatextField_47.setBounds(969, 121, 86, 20);
+		add(bahayatextField_47);
+		bahayatextField_47.setColumns(10);
+		
+		JPanel panel_7 = new JPanel();
+		panel_7.setBackground(Color.ORANGE);
+		panel_7.setBounds(843, 11, 258, 147);
+		add(panel_7);
+		panel_7.setLayout(null);
+		
+		JPanel panel_8 = new JPanel();
+		panel_8.setBackground(new Color(0, 102, 255));
+		panel_8.setBounds(843, 171, 258, 147);
+		add(panel_8);
+		panel_8.setLayout(null);
+		
+		JButton btnSimpan = new JButton("Simpan");
+		btnSimpan.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				removeAll();
+				setLayout(new BorderLayout());
+				add(pilih);
+			}
+		});
+		btnSimpan.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btnSimpan.setBounds(71, 53, 117, 46);
+		panel_8.add(btnSimpan);
+		
+		JPanel panel_9 = new JPanel();
+		panel_9.setBackground(new Color(255, 0, 0));
+		panel_9.setBounds(843, 327, 258, 153);
+		add(panel_9);
+		panel_9.setLayout(null);
+		
+		JButton btnHapus = new JButton("Hapus");
+		btnHapus.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				/*removeAll();
+				setLayout(new BorderLayout());
+				add(pilih);*/
+			}
+		});
+		btnHapus.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		btnHapus.setBounds(74, 31, 117, 46);
+		panel_9.add(btnHapus);
+
+	}
+}
